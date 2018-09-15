@@ -1,0 +1,12 @@
+<h4>Who can you teach?</h4>
+
+{{select-private model=model canEdit=true}}
+
+{{select-maxstudents model=model canEdit=true}}
+
+<h5>Target experience level:</h5>
+{{select-job-titles-multi value=model.jobTitles}}
+
+{{#if (contains "AvailabilitiesSignUp" enabledModules)}}
+  {{availability-invites availability=model admin=true}}
+{{/if}}

@@ -1,0 +1,9 @@
+{{#link-to 'app.main.alerts' tagName="button" class="alertsBTN"}}
+  alerts
+{{/link-to}}
+
+{{#if (gt unreadAlerts.all 0)}}
+
+    <span class='badge alerts-badge'>{{unreadAlerts.all}}</span>
+  
+{{/if}}

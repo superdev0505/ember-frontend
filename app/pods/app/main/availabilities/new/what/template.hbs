@@ -1,0 +1,10 @@
+
+<p>
+  What are you teaching?
+  <br/>
+  {{textarea value=model.info placeholder="(optional) Description of what you plan to teach" class="availability-info-field form-control"}}
+</p>
+
+{{#if (contains "Resources" enabledModules)}}
+  {{availability-resources model=model}}
+{{/if}}

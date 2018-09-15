@@ -1,0 +1,9 @@
+{{#power-select-multiple
+  options=jobtitles.all
+  selected=value
+  placeholder="Select some job titles..."
+  onchange=(action "setJobTitles")
+  as |jt|
+}}
+  {{jt.name}}
+{{/power-select-multiple}}

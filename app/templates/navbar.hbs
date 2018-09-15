@@ -1,0 +1,47 @@
+
+<button class="navBK" {{action "toggleNav"}}></button>
+
+
+<nav class="mainNav">
+
+	<ul>
+
+		<li>
+		{{#link-to 'app.main.users/edit' session.currentUser tagName='button' class='profile-button'}}
+			<div class="icon">
+				{{user-avatar user=session.currentUser size=48}}
+			</div>My Profile
+		{{/link-to}}
+		</li>
+		{{!-- <li>
+		{{#link-to 'notification-preferences/show' tagName='button' class='notifications-button'}}
+			<div class="icon"><img src="images/menuIcons/Notifications_Inactive.png"></div>Notifications
+		{{/link-to}}
+		</li>
+		<li>
+		{{#link-to 'about' tagName='button' class='about-button'}}
+			<div class="icon"><img src="images/menuIcons/About_Inactive.png"></div>About Us
+		{{/link-to}}
+		</li>
+
+		<li>
+		{{#link-to 'resources' tagName='button' class='resources-button'}}
+			<div class="icon"><img src="images/menuIcons/Resources_Inactive.png"></div>Resources
+		{{/link-to}}
+		</li>
+
+		<li>
+		{{#link-to 'help' tagName='button' class='help-button'}}
+			<div class="icon"><img src="images/menuIcons/Help_Inactive.png"></div>Help
+		{{/link-to}}
+		</li> --}}
+
+		<li>
+			<button {{action 'logout'}} class='logout-button'>
+				<div class="icon"><img src="images/menuIcons/LogOut_Inactive.png"></div>Logout
+			</button>
+		</li>
+	</ul>
+
+
+</nav>

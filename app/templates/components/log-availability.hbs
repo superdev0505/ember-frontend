@@ -1,0 +1,98 @@
+
+<div class="{{availability.id}} log-availability notification">
+  <div class="info">
+
+
+
+    <div class="text">
+
+
+
+      {{#if isByCurrentUser}}
+      Your teaching session
+      {{else}}
+      Attended {{availability.user.name}}'s teaching
+      {{/if}}
+
+
+      <br/>
+
+      {{fa-icon "clock-o"}}
+      {{moment-format availability.startTime "HH:mm"}} - {{moment-format availability.endTime "HH:mm"}} on
+      {{moment-format availability.startTime "DD/MM/YY"}}
+
+      <br/>
+      {{fa-icon "map-marker"}}
+      {{availability.location.name}}
+
+      <br/>
+      {{fa-icon "users"}}
+      {{availability.students.length}} students
+
+
+
+      {{#if availability.info}}
+      <br/>
+      {{fa-icon "info-circle"}}
+      {{availability.info}}
+      {{/if}}
+
+
+      <div class="log-availability-buttons">
+        {{#if isByCurrentUser}}
+        <button {{action "toggleFeedback"}}>
+          {{fa-icon "file"}}
+          {{availability.feedbacks.length}} Feedback
+        </button>
+        {{/if}}
+
+        {{#link-to "app.main.availabilities/show" availability tagName="button"}}
+        {{fa-icon "info-circle"}}
+        Info
+        {{/link-to}}
+
+      </div>
+{{!--
+      {{#if showFeedback}}
+      <div class='log-availability-feedbacks'>
+        {{#each feedback in availability.feedbacks}}
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            {{user-avatar user=feedback.user size=24}} {{feedback.user.name}}
+          </div>
+
+          <div class="panel-body">
+            {{#each response in feedback.sortedFeedbackQuestionResponses}}
+            <p>
+
+              {{#if response.feedbackQuestion.isText}}
+                <b>{{response.feedbackQuestion.title}}</b>
+                <br/>
+                <i>{{response.body}}</i>
+              {{/if}}
+              {{#if response.feedbackQuestion.isLikert}}
+                <b>{{response.score}} / 5</b>
+                {{response.feedbackQuestion.title}}
+              {{/if}}
+            </p>
+            {{/each}}
+            <div class="text-right text-muted">
+              <small>submitted {{formatted-date date=feedback.createdAt}}</small>
+            </div>
+          </div>
+        </div>
+        {{else}}
+        You have no feedback from this session.
+        {{/each}}
+      </div>
+      {{/if}} --}}
+
+
+    </div>
+  </div>
+  {{!-- <div class="icon">
+    <div class="halfRing"><div class="ring"></div></div>
+    <!-- TODO: user image if from one user, else users icon -->
+    {{user-avatar user=availability.user size=64}}
+  </div> --}}
+</div>

@@ -1,0 +1,14 @@
+<h3>This session is confirmed.</h3>
+
+{{availability-info availability=changeset canEdit=canEdit editInfo=editInfo}}
+
+{{availability-times availability=changeset canEdit=canEdit}}
+
+{{availability-people availability=changeset canEditPrivate=canEdit canAdd=canEdit inviteOpts=inviteOpts}}
+
+<button {{action 'saveChanges'}} class='btn btn-default'>
+  Save Changes
+</button>
+<button {{action 'cancelChanges'}} class='btn btn-default'>
+  Cancel
+</button>

@@ -1,0 +1,57 @@
+<div class="show-availability">
+  <div class="show-availability-header">
+
+    <div class="show-availability-buttons well">
+
+      {{#link-to 'app.main.availabilities/show.index' model class="show-availability-button show-availability-button-info" tagName='button'}}
+        {{fa-icon 'info'}}
+        <br/>
+        info
+      {{/link-to}}
+      {{#if canEdit}}
+        {{#link-to 'app.main.availabilities/show.edit' model class="show-availability-button show-availability-button-edit" tagName='button'}}
+          {{fa-icon 'cog'}}
+          <br/>
+          edit
+        {{/link-to}}
+      {{/if}}
+      {{#if (contains "AvailabilitiesSignUp" enabledModules)}}
+        {{#link-to 'app.main.availabilities/show.users' model class="show-availability-button show-availability-button-users" tagName='button'}}
+          {{fa-icon 'users'}}
+          <br/>
+          people
+        {{/link-to}}
+      {{/if}}
+      {{#if (contains "Resources" enabledModules)}}
+        {{#link-to 'app.main.availabilities/show.resources' model class="show-availability-button show-availability-button-resources" tagName='button'}}
+          {{fa-icon 'files-o'}}
+          <br/>
+          resources
+        {{/link-to}}
+      {{/if}}
+      {{#if (contains "Feedbacks" enabledModules)}}
+        {{#if (eq model.aasmState 'completed')}}
+          {{#link-to 'app.main.availabilities/show.feedback' model class="show-availability-button show-availability-button-feedback" tagName='button'}}
+            {{fa-icon 'users'}}
+            <br/>
+            feedback
+          {{/link-to}}
+        {{/if}}
+      {{/if}}
+      {{#if (contains "Messages" enabledModules)}}
+        {{#link-to 'app.main.availabilities/show.messages' model class="show-availability-button show-availability-button-messages" tagName='button'}}
+          {{fa-icon 'comments'}}
+          <br/>
+          messages
+        {{/link-to}}
+      {{/if}}
+  	</div>
+
+  </div>
+  <div class="show-availability-body">
+    {{loading-spinner}}
+    
+    {{outlet}}
+
+  </div>
+</div>

@@ -1,0 +1,6 @@
+{{#power-select
+  options=locations.all
+  selected=value
+  onchange=(action "selectLocation") as |location|}}
+  {{location.name}}
+{{/power-select}}

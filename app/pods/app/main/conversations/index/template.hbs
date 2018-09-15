@@ -1,0 +1,71 @@
+<div class="filter-bar">
+	<div class="input-group users-search-group">
+		<span class="input-group-addon ">
+			Search
+		</span>
+
+		{{input value=conversationSearchText class="form-control searchInput" placeholder=""}}
+	</div>
+</div>
+
+{{loading-spinner}}
+
+{{#each sortedModels as |conversation_member|}}
+
+	{{#link-to 'app.main.conversations.show' conversation_member.conversation.id}}
+
+	<div class="notification conversation-index">
+
+		<div class="info">
+
+			<div class="title">
+
+			</div>
+			<div class="text">
+				<div class="conversation-index-header">
+          {{conversation_member.displayName}}
+					{{!-- {{conversation-header conversation=conversation}} --}}
+				</div>
+				<div class="conversation-index-body text-muted">
+					{{!-- {{conversation.lastMessage}} --}}
+				</div>
+
+			</div>
+		</div>
+		<div class="icon">
+			<div class="halfRing"><div class="ring"></div></div>
+			<!-- TODO: user image if from one user, else users icon -->
+			<img src="images/MessageIcon.png">
+		</div>
+		<div class="dateTime">
+			{{formatted-date date=conversation_member.conversation.updatedAt}}
+		</div>
+
+
+	</div>
+
+
+	{{/link-to}}
+
+
+{{else}}
+	{{#if loadedOnce}}
+		<div class="no-messages-text">
+
+		{{!-- {{#if loadedOnce}} --}}
+			You have no messages yet.
+			<br/>
+			Click 'New Group' to send messages.
+		{{!-- {{/if}} --}}
+
+		</div>
+	{{/if}}
+{{/each}}
+
+
+{{#if loadedOnce}}
+	<div style="clear:both;"></div>
+	<button class="btn btn-default" {{action 'loadMore'}}>
+		Load More
+	</button>
+{{/if}}

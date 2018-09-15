@@ -1,0 +1,20 @@
+
+<p>
+  <h4>Where are you teaching?</h4>
+  {{select-location value=model.location}}
+
+  <br/>
+  {{input value=model.locationInfo placeholder="(optional) Meeting place details e.g. Ward 8" class="location-info-field form-control"}}
+</p>
+
+
+<p>
+  <h4>When can you teach?</h4>
+
+  {{datetimepicker-component value=model.startTime updateEnd=model.endTime updateDuration=model.duration}}
+
+
+  <br/>
+  I'm free for:<br/>
+  {{select-duration model=model}}
+</p>

@@ -1,0 +1,14 @@
+{{search-bar value=searchText}}
+{{loading-spinner}}
+
+{{#each model as |feedback|}}
+	{{#link-to "app.main.feedbacks.show" feedback.id class='feedback' tagName='div'}}
+		Received from {{feedback.user.name}}
+		{{formatted-date date=feedback.createdAt}}
+
+	{{/link-to}}
+{{else}}
+	<div class="empty-logbook-text">
+		You have not received any feedback yet.
+	</div>
+{{/each}}

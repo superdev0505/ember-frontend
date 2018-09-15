@@ -1,0 +1,12 @@
+{{#if (gt model.length 0)}}
+  <h4><b>Teaching Requests Near You</b></h4>
+  {{#link-to "app.main.availability-requests.index" class="more-requests-button"}}
+    Show All
+  {{/link-to}}
+
+  {{#each model as |availability-request|}}
+    {{#link-to 'app.main.availability-requests.show' availability-request}}
+      {{show-teaching-request model=availability-request}}
+    {{/link-to}}
+  {{/each}}
+{{/if}}

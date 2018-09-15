@@ -1,0 +1,14 @@
+{{loading-spinner}}
+
+{{#if (contains "Logbook" enabledModules)}}
+  {{#link-to "app.main.logbook-entries.index" tagName='button' class='btn btn-home'}}
+    Browse My Logbook
+  {{/link-to}}
+{{/if}}
+
+{{#if (contains "Feedbacks" enabledModules)}}
+  <br/><br/>
+  {{#link-to "app.main.feedbacks.index" tagName='button' class='btn btn-home'}}
+    My Feedback
+  {{/link-to}}
+{{/if}}

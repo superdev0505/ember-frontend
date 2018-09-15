@@ -1,0 +1,14 @@
+
+{{#each sortedResponses as |response|}}
+
+  <div class="feedback-show-response response-{{response.id}}">
+    <h4>{{response.feedbackQuestion.title}}</h4>
+
+    {{#if (eq response.feedbackQuestion.questionType 'likert')}}
+      {{response.score}} / 5
+    {{else}}
+      {{response.body}}
+    {{/if}}
+  </div>
+
+{{/each}}

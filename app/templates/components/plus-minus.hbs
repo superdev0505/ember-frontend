@@ -1,0 +1,17 @@
+<table class="plusminus-table">
+  <tr>
+    <td class='plusminus-left'>
+      <button {{action 'doMinus'}}>
+        {{fa-icon 'minus-circle' size=2}}
+      </button>
+    </td>
+    <td>
+      {{yield}}
+    </td>
+    <td class='plusminus-right'>
+      <button {{action 'doPlus'}}>
+        {{fa-icon 'plus-circle' size=2}}
+      </button>
+    </td>
+  </tr>
+</table>

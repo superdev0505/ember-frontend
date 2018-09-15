@@ -1,0 +1,71 @@
+<div class="availability-info panel panel-default">
+  <div class="panel-heading">
+    {{#if canAdd}}
+      <div class="pull-right">
+        <button {{action 'showAddUsersModal'}} class="addUserButton">
+          Add
+        </button>
+      </div>
+      {{#ember-remodal forService=true name='inviteUserModal'}}
+        {{add-users model=availability isJoin=true joinModel='availability-user' joinOpts=inviteOpts headerText='Invite people'}}
+      {{/ember-remodal}}
+    {{/if}}
+    People
+  </div>
+  <div class="panel-body">
+
+
+
+    <div class="users-list text-left">
+        {{#each availability.availabilityUsers as |userjoin|}}
+            <div class="availability-user">
+              {{#ember-remodal forService=true as |modal|}}
+                {{#modal.open}}
+                  <div class="row">
+                    <div class="col-xs-3">
+                      {{user-avatar user=userjoin.user size=64}}
+                    </div>
+                    <div class="col-xs-9">
+                      {{userjoin.user.name}}
+                      <div class="availability-user-footer">
+                        {{if userjoin.teacher 'Teacher' 'Student'}}{{if userjoin.admin ', Admin'}}
+                         - {{userjoin.aasmState}}
+                      </div>
+                    </div>
+                  </div>
+
+                {{/modal.open}}
+
+                {{!-- Show a bit of info about the user, then some options --}}
+                {{user-card user=userjoin.user}}
+                <hr/>
+
+                {{#if (eq userjoin.aasmState 'invited')}}
+                  Invited to this session, awaiting response.
+                {{/if}}
+                {{#if (eq userjoin.aasmState 'rejected')}}
+                  Cannot make this session.
+                {{/if}}
+                {{#if (eq userjoin.aasmState 'interested')}}
+                  Interested in this session as a {{if userjoin.teacher 'teacher' 'student'}}
+                {{/if}}
+                {{#if (eq userjoin.aasmState 'confirmed')}}
+                  Confirmed for this session as a {{if userjoin.teacher 'teacher' 'student'}}
+                {{/if}}
+                {{#if (eq userjoin.aasmState 'cancelled')}}
+                  Cancelled for this session.
+                {{/if}}
+                {{#if (eq userjoin.aasmState 'dna')}}
+                  Signed up for this session but did not attend.
+                {{/if}}
+                {{#if (eq userjoin.aasmState 'attended')}}
+                  Attended this session as a {{if userjoin.teacher 'teacher' 'student'}}
+                {{/if}}
+              {{/ember-remodal}}
+
+
+            </div>
+        {{/each}}
+    </div>
+  </div>
+</div>

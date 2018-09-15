@@ -1,0 +1,82 @@
+<h3>About your session</h3>
+<p>{{model.info}}</p>
+
+<h3>What did you actually teach?</h3>
+{{textarea value=model.completedNotes class='form-control completed-notes-field' placeholder="Write a brief description of what was actually taught for your records"}}
+
+Specialties (TODO...)
+
+{{#if (contains "AvailabilitiesSignUp" enabledModules)}}
+  <h3>Who attended?</h3>
+
+  <table class="confirm-attended-table">
+    <tr>
+      <th></th>
+      <th colspan=2>Attended?</th>
+      <th>Request feedback?</th>
+    </tr>
+    {{#each model.availabilityUsers as |join|}}
+      <tr class="completed-user">
+        <td class="completed-user-name">
+          {{user-avatar user=join.user size=24}} {{join.user.name}}
+        </td>
+        <td>
+          <a {{action 'markAttended' join}} class="markAttendedButton {{if (contains join attendedUsers) 'active'}}">
+            {{fa-icon 'check-circle' size=2}}
+          </a>
+        </td>
+        <td>
+          <a {{action 'markDna' join}} class="markDnaButton {{if (contains join dnaUsers) 'active'}}">
+            {{fa-icon 'times-circle' size=2}}
+          </a>
+        </td>
+
+        {{#if (contains "Feedbacks" enabledModules)}}
+          <td>
+            {{#if (not (eq join.user.id session.currentUser.id))}}
+              <a {{action 'toggleFeedback' join}} class="markFeedbackButton">
+                {{#if (contains join feedbackUsers)}}
+                  <input type="checkbox" checked=true />
+                {{else}}
+                  <input type="checkbox" />
+                {{/if}}
+              </a>
+            {{/if}}
+          </td>
+        {{/if}}
+      </tr>
+    {{/each}}
+  </table>
+
+
+  <div>
+    <button {{action 'showAddUsersModal'}} class="addUserButton">
+      {{fa-icon 'user-plus'}}
+      Add People
+    </button>
+  </div>
+  {{#ember-remodal forService=true name='addCompletedUserModal'}}
+    {{add-users model=model isJoin=true joinModel='availability-user' joinOpts=inviteOpts headerText='Add attendees' addButtonText='Add' modalName='addCompletedUserModal'}}
+  {{/ember-remodal}}
+{{/if}}
+
+{{#if (contains "Logbook" enabledModules)}}
+  <p>
+    {{input type='checkbox' checked=createLogbookEntry}}
+    Log this session in my logbook
+  </p>
+  {{!--#if createLogbookEntry}}
+    <p>
+      Reflect on this session (optional)
+      <br/>
+      {{textarea value=logbookReflection class='form-control'}}
+    </p>
+  {{/if--}}
+
+{{/if}}
+
+{{#page-footer}}
+  <button class="mark-complete-button btn btn-default" {{action 'markComplete'}}>
+    Mark as complete
+  </button>
+{{/page-footer}}

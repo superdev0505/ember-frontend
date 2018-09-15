@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    {{yield}}
+  </div>
+  <div class="panel-body">
+    {{#each sortedSpecialties as |specialty|}}
+      <div class="list-specialty">
+        {{#if canEdit}}
+          <button class="pull-right" {{action 'removeSpecialty' specialty}}>
+            {{fa-icon 'times'}}
+          </button>
+        {{/if}}
+        {{specialty.name}}
+      </div>
+    {{else}}
+      <div class="list-specialty">
+        {{emptyText}}
+      </div>
+    {{/each}}
+
+    <div class="list-specialty">
+
+      <table class="add-specialty-table">
+        <tr>
+          <td style="width:20px;">
+            {{fa-icon "plus"}}
+          </td>
+          <td>
+            <div class='newSpecialty'>
+              {{!-- {{input value=searchText class='form-control' placeholder=''}} --}}
+              {{!select-2 content=availableSpecialtiesSorted value=selectedSpecialty
+      					optionLabelPath="name" class=select2Class
+      					placeholder=addText}}
+                {{#power-select selected=selectedSpecialty
+                  options=availableSpecialtiesSorted
+                  onchange=(action (mut selectedSpecialty)) 
+                  placeholder=addText as |jt|}}
+      						{{jt.name}}
+      					{{/power-select}}
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

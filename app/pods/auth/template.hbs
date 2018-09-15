@@ -1,0 +1,29 @@
+<div class="jumbotron jumbotron-hero login-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-sm-push-7 img-holder">
+							<img class="img-product" sizes="(min-width: 768px) 696px, 348px" src="images/product-iphone2.png" alt="">
+						</div>
+
+            <div class="col-sm-7 col-sm-pull-5 text-holder">
+                <h1 style="margin-bottom: 0px; margin-left: -5px;">Oslr</h1>
+								<h2 style="margin-top: 5px;">Patient Centred Learning</h2>
+<!--                             <p class="moments-running-hero-subtext"><span>Using technology the revolutionise medical education, from the classroom the the bedside</span></p> -->
+
+								<div class="login-actions">
+									{{#link-to 'auth.login' class="btn btn-green login-button"}}Login{{/link-to}}
+                  <p class="text-line"><span>Or</span></p>
+
+									{{#link-to 'auth.registration' class="btn btn-halo register-button"}}Sign up{{/link-to}}
+
+
+                  <p class="small small-subtext">Find peers, teach &amp; learn together.</p>
+								</div>
+
+								<div class="login-form-container">
+									{{outlet}}
+								</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+{{#if canEdit}}
+  <button class="pull-right" {{action 'togglePrivate'}}>
+    change
+  </button>
+{{/if}}
+{{#if model.isPrivate}}
+  {{fa-icon 'lock'}} This is a private session.<br/>Only invited people can sign up.
+{{else}}
+  {{fa-icon 'users'}} This is a public session.<br/>Anyone can sign up.
+{{/if}}

@@ -1,0 +1,10 @@
+{{#if (not model.isPrivate)}}
+  {{#if canEdit}}
+    {{#plus-minus min=1 max=20 step=1 targetVal=model.maxStudents}}
+      Max {{model.maxStudents}} students
+    {{/plus-minus}}
+  {{else}}
+    {{model.studentCount}} of {{model.maxStudents}} students signed up.
+  {{/if}}
+  {{yield}}
+{{/if}}

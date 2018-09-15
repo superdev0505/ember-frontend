@@ -1,0 +1,12 @@
+{{#page-footer}}
+  <form {{action 'sendMessage' on='submit'}} class="text-center">
+    <div class="message">
+      <div class="messageBody">
+        {{textarea value=newMessage placeholder='New Message' class="form-control newMessageBody" insert-newline='sendMessage'}}
+      </div>
+      <div class="postButton">
+        <button class="sendMessageButton" type='submit'>Send</button>
+      </div>
+    </div>
+  </form>
+{{/page-footer}}

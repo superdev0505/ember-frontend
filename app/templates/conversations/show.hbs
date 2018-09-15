@@ -1,0 +1,15 @@
+<div class="header">Channel Testing</div>
+<div class="page">
+  <div class="content-padded">
+    {{#each messages as |message|}}
+      {{message}}
+    {{/each}}
+    <div class="form-control">
+      <label>New Message</label>
+      {{input value=newMessage class="form-control"}}
+      <button class="btn" {{action 'sendMessage'}}>Send Message</button>
+    </div>
+  </div>
+</div>
+<div class="footer">
+</div>

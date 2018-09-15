@@ -1,0 +1,45 @@
+{{loading-spinner}}
+
+{{#if (contains "Messages" enabledModules)}}
+  {{#link-to "app.main.conversations" tagName='button' class='btn btn-home'}}
+    Messages
+    {{#if (gt unreadAlerts.messages 0)}}
+      <span class="badge">{{unreadAlerts.messages}}</span>
+    {{/if}}
+  {{/link-to}}
+  <br/><br/>
+{{/if}}
+
+{{#if (contains "Directory" enabledModules)}}
+  {{#link-to "app.main.users" tagName='button' class='btn btn-home'}}
+    Directory
+  {{/link-to}}
+  <br/><br/>
+{{/if}}
+
+{{#if (contains "Users" enabledModules)}}
+  {{#link-to "app.main.users/edit" session.data.authenticated.user_id tagName='button' class='btn btn-home'}}
+    My Profile
+  {{/link-to}}
+  <br/><br/>
+  {{#link-to "app.main.users/account" session.data.authenticated.user_id tagName='button' class='btn btn-home'}}
+    My Account
+  {{/link-to}}
+  <br/><br/>
+{{/if}}
+
+{{#if (contains "Help" enabledModules)}}
+  {{#link-to "app.main.help" tagName='button' class='btn btn-home'}}
+    Help
+  {{/link-to}}
+  <br/><br/>
+
+  {{#link-to "app.main.about" tagName='button' class='btn btn-home'}}
+    About
+  {{/link-to}}
+  <br/><br/>
+{{/if}}
+
+<button {{action "logout"}} class="btn btn-home btn-confirmation more-logout-button">
+  Logout
+</button>

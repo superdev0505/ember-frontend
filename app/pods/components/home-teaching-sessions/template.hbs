@@ -1,0 +1,9 @@
+{{#if (gt model.length 0)}}
+  <h4><b>Suggested For You</b></h4>
+
+  {{#each model as |availability|}}
+    {{#link-to 'app.main.availabilities/show.index' availability}}
+      {{feed-availability availability=availability}}
+    {{/link-to}}
+  {{/each}}
+{{/if}}

@@ -1,0 +1,43 @@
+{{#if joinModel.admin}}
+  You are an administrator for this session.
+  {{#if (eq availability.aasmState 'confirmed') }}
+    <br/>
+    {{#link-to 'app.main.availabilities/completed' availability tagName='button' class='btn btn-default complete-session-button'}}
+      Session Completed
+    {{/link-to}}
+  {{/if}}
+{{/if}}
+
+{{#if (eq availability.aasmState 'completed')}}
+  <p>This session is completed.</p>
+{{/if}}
+
+{{!-- Sign up to a public session --}}
+
+{{#if (and (not joinModel) (not availability.isPrivate) (or (eq availability.aasmState 'proposed') (eq availability.aasmState 'confirmed')))}}
+  This is a public session.
+  {{#if (contains "AvailabilitiesSignUp" enabledModules)}}
+    <br/>
+    <button class="btn btn-default" {{action 'signUp'}}>
+      Sign Up
+    </button>
+  {{/if}}
+{{/if}}
+
+{{!-- Cancel your sign up - for proposed/confirmed session, not for admins --}}
+{{#if (and joinModel (or (eq joinModel.aasmState 'confirmed') (eq joinModel.aasmState 'interested')) (not joinModel.admin) (or (eq availability.aasmState 'proposed') (eq availability.aasmState 'confirmed')) )}}
+  You are signed up to this session.
+  <br/>
+  <button class="btn btn-default" {{action 'cancelSignUp'}}>
+    Cancel
+  </button>
+{{/if}}
+
+{{!-- Un-cancel a cancelled sign-up --}}
+{{#if (and joinModel (eq joinModel.aasmState 'cancelled') )}}
+  You have cancelled your attendance at this session.
+  <br/>
+  <button class="btn btn-default" {{action 'uncancelSignUp'}}>
+    Undo
+  </button>
+{{/if}}

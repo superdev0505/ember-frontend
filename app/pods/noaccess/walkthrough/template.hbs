@@ -1,0 +1,46 @@
+<div class="container-main">
+
+	<div class="offlineOnly offlineBackground hidden"></div>
+	<div class="offlineOnly offlineAlert alert alert-danger hidden">
+		You are offline. Please reconnect to continue using Oslr.
+	</div>
+
+  <div class="header">
+    <div class="topbar-buttons row">
+      <div class="col-xs-3 topbar-button secondary-cta">
+  		</div>
+
+  		<div class="col-xs-6 topbar-button main-heading">
+
+        <h3>Welcome</h3>
+
+  		</div>
+
+  		<div class="col-xs-3 topbar-button primary-cta">
+
+        {{fa-icon "arrow-circle-o-right" size=2}}<br/>
+        {{#link-to "app.main.availabilities"}}skip{{/link-to}}
+
+  		</div>
+    </div>
+  </div>
+
+  <div class="subContainer subContainer-profilesetup">
+    <div class="containerBody containerBody-profilesetup">
+
+      <div class="setup-profile-form">
+
+        This short video will take you through the basics of using Oslr.
+
+        <div class="walkthrough-video">
+          {{! ember-youtube ytid="xp3CzXy33TE"}}
+        </div>
+
+
+        <br/>
+        {{#link-to "app.main.availabilities" tagName="button" class="btn btn-default"}}Start using Oslr{{/link-to}}
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+
+<div class="show-teaching-request-info">
+  {{#if model.info}}
+    {{#truncate-multiline lines=3 showButton=false}}
+      {{model.info}}
+    {{/truncate-multiline}}
+  {{else}}
+    <i>No details of this request has been given</i>
+  {{/if}}
+</div>
+
+<div class="row">
+  <div class="col-xs-3">
+    {{user-avatar user=model.user size=96}}
+  </div>
+  <div class="col-xs-9 text-left">
+    Requested by {{model.user.name}}
+    <br/>
+    {{model.user.jobTitle.name}}
+    <br/>
+    Posted {{formatted-date date=model.createdAt}}
+  </div>
+</div>
+
+<div class="show-availability-request-location">
+  {{fa-icon "map-marker"}} {{model.location.name}}
+</div>
+
+<div class="show-availability-request-votes">
+  <img src="images/menuIcons/thumbs_up_black.png" width=24 height=24 />
+  {{model.availabilityRequestVotesCount}} people want this teaching:
+  <br/>
+  <table class="availabilityRequestVotesTable">
+    {{#each model.availabilityRequestVotes as |vote|}}
+      <tr class="availabilityRequestVote">
+
+        <td>{{user-avatar user=vote.user size=48}}</td>
+        <td class="text-left">
+          {{vote.user.name}}
+          <div class="small-subtext">
+            {{vote.user.jobTitle.name}}
+          </div>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+  {{#if canVote}}
+    <button class="btn btn-default" {{action 'upvote'}}>
+      <img src="/images/menuIcons/thumbs_up_white.png" width=24px height=24px />
+      I want teaching on this too
+    </button>
+  {{/if}}
+  <br/><br/>
+  {{#link-to 'app.main.availabilities.new.from-request' model.id class="btn btn-default" tagName='button'}}
+    <img src="/images/menuIcons/teach_active.png" width=24px height=24px />
+    I can teach this
+  {{/link-to}}
+</div>
+
+
+
+
+
+
+
+
+<hr/>
+  {{!--#link-to "comments" "availability-request" model.id}}
+    {{fa-icon "comments"}}
+    {{model.comments.length}} comments
+  {{/link-to --}}
+{{!-- <hr/> --}}
+
+{{#if (gt model.savedAvailabilities.length 0)}}
+  <h4><b>Related teaching sessions:</b></h4>
+  {{#each model.savedAvailabilities as |availability|}}
+    {{feed-availability availability=availability}}
+  {{/each}}
+{{/if}}

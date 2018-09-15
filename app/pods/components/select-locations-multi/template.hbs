@@ -1,0 +1,9 @@
+{{#power-select-multiple
+  options=locations.all
+  selected=value
+  placeholder="Select some hospitals..."
+  onchange=(action "setLocations")
+  as |location|
+}}
+  {{location.name}}
+{{/power-select-multiple}}

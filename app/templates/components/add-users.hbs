@@ -1,0 +1,39 @@
+<h3>{{headerText}}</h3>
+
+{{input value=addUserSearchText placeholder="Search by name or email" class="add-user-search-input form-control"}}
+
+{{#if (gt usersToAdd.length 0)}}
+  <div>To be added:</div>
+{{/if}}
+<div class="added-users">
+  {{#each usersToAdd as |user|}}
+    <div class="user-to-add">
+      <button class="removeAddedUserButton" {{action 'removeAddedUser' user}}>
+        {{fa-icon 'times'}}
+      </button>
+      {{user-avatar user=user}}
+      <br/>
+      {{user.name}}
+    </div>
+  {{/each}}
+</div>
+{{#if (gt usersToAdd.length 0)}}
+  <button {{action 'addUsers'}} class="btn btn-default do-add-users-button">
+    {{addButtonText}}
+  </button>
+
+  <button {{action 'cancelAddUsers'}} class="btn btn-default">
+    Cancel
+  </button>
+{{/if}}
+
+<div class="add-user-search-results">
+  {{#each searchResults as |user|}}
+    <div class="add-user-search-result">
+      <a {{action 'addUser' user}}>
+        {{user-avatar user=user size=36}}
+        {{user.name}}
+      </a>
+    </div>
+  {{/each}}
+</div>

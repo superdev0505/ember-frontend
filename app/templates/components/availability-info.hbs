@@ -1,0 +1,30 @@
+<div class="availability-info panel panel-default">
+  <div class="panel-heading">
+    Session Details
+  </div>
+  <div class="panel-body">
+    {{#if (and canEdit (not editInfo))}}
+      <button class="pull-right toggleEditInfoButton" {{action 'toggleEditMode'}}>
+        {{fa-icon 'pencil'}}
+      </button>
+    {{/if}}
+    {{#if editInfo}}
+      {{textarea value=availability.info class="form-control editInfoField" placeholder="Enter a description of this teaching session."}}
+      <div class="text-center">
+        <button class='btn btn-default saveInfoButton' {{action 'saveInfo'}}>
+          Done
+        </button>
+
+      </div>
+    {{else}}
+      <div class="text-left">
+        {{fa-icon 'info-circle'}}
+        {{#if availability.info}}
+          {{availability.info}}
+        {{else}}
+          <i>No description has been given for this session.</i>
+        {{/if}}
+      </div>
+    {{/if}}
+  </div>
+</div>

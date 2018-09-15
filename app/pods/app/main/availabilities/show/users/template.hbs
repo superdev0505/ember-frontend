@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Settings
+  </div>
+  <div class="panel-body">
+    <div class="user-people-private">
+      {{select-private model=changeset canEdit=canEdit}}
+
+      <hr/>
+      {{select-maxstudents model=changeset canEdit=canEdit}}
+
+      <h5>Target experience level:</h5>
+      {{#if canEdit}}
+        {{select-job-titles-multi value=changeset.jobTitles}}
+      {{else}}
+        {{join ',' (map-by "name" changeset.jobTitles)}}
+      {{/if}}
+
+      {{#if canEdit}}
+        <button class="btn btn-default" {{action 'savePeopleSettings'}}>
+          Save Changes
+        </button>
+      {{/if}}
+    </div>
+  </div>
+</div>
+
+<div class='show-availability-people'>
+  {{availability-invites availability=changeset admin=canEdit}}
+  {{!-- availability-people availability=changeset canEditPrivate=canEdit canAdd=canEdit inviteOpts=inviteOpts --}}
+</div>

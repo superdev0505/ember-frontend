@@ -1,0 +1,47 @@
+<div class="availability-resource row">
+
+  {{#if link.item.isWebsite}}
+    <div class="col-xs-2">
+      <img height="32" width="32" src='http://www.google.com/s2/favicons?domain={{link.item.url}}' />
+    </div>
+    <div class="col-xs-8">
+      <a {{action "openResourceLink" link.item}}>
+        {{link.item.url}}
+        {{#if link.item.name}}
+          <br/>
+          {{link.item.name}}
+        {{/if}}
+      </a>
+      <div class="resource-link-notes text-muted">
+        {{#if link.notes}}
+          {{link.notes}}
+        {{/if}}
+      </div>
+    </div>
+    <div class="col-xs-2">
+      {{#if canEdit}}
+        <a {{action 'deleteAvailabilityResource' link}} class="delete-resource-link">{{fa-icon 'trash'}}</a>
+      {{/if}}
+    </div>
+  {{/if}}
+
+  {{#if link.item.isTextbook}}
+  <button {{action "openResourceLink" link.item}}>
+    <div class="col-xs-2">
+      <img width=36 src='{{link.item.imgLink}}' />
+    </div>
+    <div class="col-xs-9">
+
+        {{link.item.name}}
+
+      <div class="resource-link-notes text-muted">
+        {{#if link.notes}}
+          {{link.notes}}
+        {{/if}}
+      </div>
+    </div>
+  </button>
+  {{/if}}
+
+
+</div>

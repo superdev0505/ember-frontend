@@ -1,0 +1,69 @@
+<div class="panel panel-default email-accounts-panel">
+  <div class="panel-heading text-left">
+    <div style="font-weight:bold;">
+
+      Email Accounts
+    </div>
+  </div>
+
+  <div class="panel-body">
+
+
+
+    {{#if model.unverified}}
+      <div class="row email-account-list bg-danger">
+        <button {{action 'openModal' 'verifiedinfo'}} data-toggle="modal" data-target="#myModal">
+          There are no verified professional email addresses associated with your account.
+          Some features of Oslr will be unavailable.
+          Click to learn more.
+        </button>
+      </div>
+    {{/if}}
+    {{#each model.emailAccounts as |emailAccount|}}
+      {{email-account emailAccount=emailAccount}}
+    {{/each}}
+
+    <div class="row email-account-list">
+      <button {{action 'showAddEmail'}} class="add-email-toggle">
+        {{fa-icon "plus"}} {{fa-icon 'envelope'}}
+        Add Email Account
+      </button>
+
+      <div class="addEmailForm hidden">
+
+        {{#if errors.length}}
+          <div class='alert alert-danger'>
+              <h4>There was a problem</h4>
+              <p>The user could not be saved due to validation errors</p>
+          </div>
+        {{/if}}
+
+        {{input class="form-control emailInput" value=newEmail placeholder="Enter your email here" type='email'}}
+
+        <button {{action "addEmail"}} class="addEmailButton btn btn-default">
+          Add Email Account
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<br/><br/>
+<button {{action 'showChangePassword'}} class="change-password-button">
+  Change Password
+</button>
+<div class="changePasswordForm hidden">
+  Old password<br/>
+  {{input type="password" name="oldPassword" value=oldPassword class="form-control oldPassword"}}
+  <br/>
+  New password<br/>
+  {{input type="password" name="newPassword" value=newPassword class="form-control newPassword"}}
+  <br/>
+  Confirm new password<br/>
+  {{input type="password" name="newPasswordConfirmation" value=newPasswordConfirmation class="form-control newPasswordConfirmation"}}
+  <br/>
+  <button {{action 'changePassword'}} class="btn btn-default changePassword">Change Password</button>
+</div>

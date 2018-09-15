@@ -1,0 +1,9 @@
+{{#each sortedMessages as |message|}}
+  <div class="message">
+    {{show-message message=message}}
+  </div>
+{{else}}
+  <div class="text-center text-muted">
+    No messages yet.
+  </div>
+{{/each}}

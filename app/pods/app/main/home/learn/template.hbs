@@ -1,0 +1,20 @@
+{{loading-spinner}}
+
+{{#if (contains "Availabilities" enabledModules)}}
+  {{#link-to "app.main.availabilities.index" tagName='button' class='btn btn-home'}}
+    Find Teaching
+  {{/link-to}}
+{{/if}}
+
+{{#if (contains "AvailabilityRequests" enabledModules)}}
+  <br/><br/>
+  {{#link-to "app.main.availability-requests.new" tagName='button' class='btn btn-home'}}
+    Request Teaching
+  {{/link-to}}
+{{/if}}
+
+{{#if (contains "Availabilities" enabledModules)}}
+  <hr/>
+
+  {{home-teaching-sessions}}
+{{/if}}

@@ -1,0 +1,74 @@
+<div class="show-availability-index">
+
+  {{#display-box title="Session Details"}}
+    <span class="show-availability-info">
+      {{#if model.info}}
+        {{model.info}}
+      {{else}}
+        No description has been given for this session.
+      {{/if}}
+    </span>
+
+    <hr/>
+    {{fa-icon 'clock-o'}}
+    <span class="show-availability-time">
+      {{formatted-date date=model.startTime format="D/M/YY HH:mm"}} -
+      {{formatted-date date=model.endTime format="HH:mm"}}
+    </span>
+    <br/>
+    {{fa-icon 'map-marker'}}
+    <span class="show-availability-location">
+      {{model.location.name}}
+      {{#if model.locationInfo}}
+        : {{model.locationInfo}}
+      {{/if}}
+    </span>
+
+    <hr/>
+    <div class="show-availability-useractions text-center">
+      {{#if (eq model.aasmState 'confirmed')}}
+        This session is confirmed.<br/>
+      {{/if}}
+
+      {{availability-useractions availability=model joinModel=joinModel}}
+    </div>
+  {{/display-box}}
+
+  {{#display-box icon='users' title="People"}}
+    <div class="text-center">
+      {{model.studentCount}} of {{model.maxStudents}} students signed up
+    </div>
+
+    {{#each model.availabilityUsers as |join|}}
+      <div class="show-availability-user row">
+        <div class="col-xs-3">
+          {{user-avatar user=join.user size=48}}
+        </div>
+        <div class="col-xs-9">
+          {{join.user.name}}
+          <div class="small-subtext">
+            {{#if join.teacher}}
+              Teacher
+            {{else}}
+              Student
+            {{/if}}
+            {{#if join.admin}}, admin{{/if}}
+            <br/>
+            {{join.user.jobTitle.name}}
+          </div>
+        </div>
+
+      </div>
+    {{/each}}
+  {{/display-box}}
+
+
+  {{#display-box icon='files-o' title="Resources"}}
+    {{#each model.availabilityItems as |link|}}
+      {{show-resource link=link}}
+    {{else}}
+      No resources have been posted for this teaching session.
+    {{/each}}
+  {{/display-box}}
+
+</div>

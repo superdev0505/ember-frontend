@@ -1,0 +1,17 @@
+{{#each model.availabilityItems as |availabilityItem|}}
+  <div class="availability-item">
+    {{availabilityItem.item.name}}: {{availabilityItem.item.url}}
+  </div>
+{{else}}
+  No resources have been added to this session.
+{{/each}}
+
+
+<h3>Add Website</h3>
+
+{{input value=name placeholder="Website name" class="form-control"}}
+{{input value=url placeholder="Website URL" class="form-control"}}
+
+<br/>
+
+<button {{action 'postWebsite'}}>Save</button>

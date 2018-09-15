@@ -1,0 +1,17 @@
+{
+  "name": "oslr-ui",
+  "description": "Small description for oslr-ui goes here",
+  "version": "0.0.0",
+  "options": {
+    "paths": [
+      "app"
+    ],
+    "exclude": "vendor",
+    "outdir": "docs",
+    "linkNatives": true,
+    "quiet": true,
+    "parseOnly": false,
+    "lint": false,
+    "enabledEnvironments": ["development", "production"]
+  }
+}

@@ -1,0 +1,14 @@
+<h4>Where do you want teaching?</h4>
+{{select-location value=location}}
+
+<p>
+  <h4>What do you want teaching on?</h4>
+  {{textarea value=requestText class='form-control new-teaching-request-text'
+    placeholder="Describe what you want here. This will be advertised to nearby doctors."}}
+</p>
+
+<p>
+  <button class="btn btn-default post-teaching-request-button" {{action 'postRequest'}}>
+    Post Request
+  </button>
+</p>

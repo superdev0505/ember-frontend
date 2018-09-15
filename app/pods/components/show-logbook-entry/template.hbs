@@ -1,0 +1,25 @@
+<div class="logbook-entry">
+
+  {{#if (eq entry.entryType 'taught')}}
+    {{#link-to "app.main.availabilities/show" entry.targetId}}
+      Session you taught
+      <br/>
+      {{fa-icon "clock-0"}}
+      {{formatted-date date=entry.target.startTime}}
+      <br/>
+      {{fa-icon 'map-marker'}} {{entry.target.location.name}}
+    {{/link-to}}
+  {{/if}}
+
+  {{#if (eq entry.entryType 'attended')}}
+    {{#link-to "app.main.availabilities/show" entry.targetId}}
+      Session you attended
+      <br/>
+      {{fa-icon "clock-0"}}
+      {{formatted-date date=entry.target.startTime}}
+      <br/>
+      {{fa-icon 'map-marker'}} {{entry.target.location.name}}
+    {{/link-to}}
+  {{/if}}
+
+</div>

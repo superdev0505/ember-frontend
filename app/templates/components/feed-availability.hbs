@@ -1,0 +1,171 @@
+
+{{#link-to "app.main.availabilities/show" availability tagName="a"}}
+  <div class="{{availability.id}} feed-availability {{if isNow 'now'}} {{if isToday 'today'}} row">
+
+    <div class="col-xs-3 feed-availability-pic">
+      {{user-avatar user=availability.user size=96}}
+      <div class="feed-availability-date">
+        {{formatted-date date=availability.startTime format="D MMM"}}<br/>
+        {{formatted-date date=availability.startTime format="HH:mm"}}
+      </div>
+    </div>
+
+    <div class="col-xs-8 feed-availability-content">
+      <div class="feed-availability-info">
+
+        {{#if (eq availability.aasmState 'completed')}}
+          <div class="feedback-availability-alert">
+            {{fa-icon "check-circle-o"}} Session Completed
+          </div>
+        {{/if}}
+
+        {{#if (eq availability.aasmState 'cancelled')}}
+          <div class="feedback-availability-alert">
+            {{fa-icon "exclamation-triangle"}} Session Cancelled
+          </div>
+        {{/if}}
+
+        {{#if isNow}}
+          <div class="feedback-availability-alert">
+            {{fa-icon "clock-o"}} This teacher is available now
+          </div>
+        {{else}}
+          {{#if isToday}}
+            <div class="feedback-availability-alert">
+              {{fa-icon "clock-o"}} This teacher is available now
+            </div>
+          {{/if}}
+        {{/if}}
+
+
+        {{#if availability.info}}
+          {{#truncate-multiline lines=3 showButton=false}}
+            {{availability.info}}
+          {{/truncate-multiline}}
+        {{else}}
+          <i>No description of this session has been given</i>
+        {{/if}}
+      </div>
+
+      <div class="feed-availability-footer">
+        <div class="feed-availability-student-count">
+          {{fa-icon "users"}} {{availability.studentCount}}/{{availability.maxStudents}}
+        </div>
+        By {{availability.user.name}}
+        <br/>
+        {{fa-icon 'map-marker'}} {{availability.location.name}}
+      </div>
+    </div>
+
+    <div class="col-xs-1 feed-availability-rightarrow">
+
+    </div>
+
+  </div>
+{{/link-to}}
+
+{{#if false}}
+<div class="info">
+  {{!-- {{#if availability.isFulfilled}} --}}
+  <div class="title">
+    {{fa-icon 'graduation-cap'}}
+    Teacher Available
+    {{#if availability.cancelled}}
+    - CANCELLED
+    {{/if}}
+
+    {{#if isNow}}
+    Now
+    {{else}}
+      {{#if isToday}}
+        Today
+      {{/if}}
+    {{/if}}
+  </div>
+
+  {{#each availability.availabilityUsers as |join|}}
+    {{#if join.teacher}}
+      <div class="teacher">
+        {{user-avatar user=join.user size=32}}
+        {{join.user.name}}
+      </div>
+    {{/if}}
+  {{/each}}
+
+
+  <div class="text">
+
+      {{!-- {{availability.user.name}} is available --}}
+
+      {{fa-icon "clock-o"}}
+      {{moment-format availability.startTime "HH:mm"}} - {{moment-format availability.endTime "HH:mm"}} on
+      {{moment-format availability.startTime "DD/MM/YY"}}
+
+      {{#if (eq availability.aasmState 'completed')}}
+        (completed)
+      {{/if}}
+
+      <br/>
+      {{fa-icon "map-marker"}}
+      {{availability.location.name}}
+
+      {{#if availability.blocked}}
+        <div class="alert alert-danger">
+          {{fa-icon "flag"}} Content blocked
+        </div>
+      {{else}}
+
+        {{#if availability.info}}
+          <br/>
+          {{fa-icon "info-circle"}}
+          {{availability.info}}
+        {{/if}}
+
+        <div class="row">
+          {{#each student in availability.students}}
+          <div class="availability-signup-user-pic">
+            {{user-avatar user=student size=24}}
+          </div>
+          {{/each}}
+          {{#if availability.isPublic}}
+            {{#each space in availability.freeSpaces}}
+              <div class="availability-signup-user-pic">
+                {{fa-icon "user-md"}}
+              </div>
+            {{/each}}
+          {{/if}}
+        </div>
+        <div>
+          {{#if availability.isPublic}}
+            {{availability.studentCount}} of {{availability.maxStudents}} students signed up
+          {{else}}
+            {{availability.inviteCount}} students invited (private session)
+          {{/if}}
+        </div>
+      {{/if}}
+
+    <div class="website-resources">
+      {{#each availability.availabilityItems as |join|}}
+         Website: <a {{action 'openLink' join.item.url}}>{{join.item.name}}</a>
+      {{/each}}
+    </div>
+
+  </div>
+  {{!-- {{else}}
+    <img src="images/loading_spinner.gif" />
+  {{/if}} --}}
+</div>
+{{!-- <div class="icon">
+  <div class="halfRing"><div class="ring"></div></div>
+  {{#if availability.isFulfilled}}
+    {{user-avatar user=availability.user size=64}}
+  {{else}}
+    <img src="images/mortar_board.png" />
+  {{/if}}
+
+</div> --}}
+<div class="dateTime">
+
+  updated {{formatted-date date=availability.updatedAt}}
+</div>
+{{/if}}

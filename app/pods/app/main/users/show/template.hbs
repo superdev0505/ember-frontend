@@ -1,0 +1,8 @@
+{{#if session.currentUser.incompleteProfile}}
+  <div class='bg-error'>
+    Your profile is not complete.
+    Please tell us where you work and what level you are at.
+  </div>
+{{/if}}
+
+{{user-form user=model}}

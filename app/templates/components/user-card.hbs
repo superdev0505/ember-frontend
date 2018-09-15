@@ -1,0 +1,5 @@
+{{user-avatar user=user size=128}}
+
+<br/>
+<h3>{{user.name}}</h3>
+{{user.jobTitle.name}} at {{join ', ' (map-by 'location.name' user.userLocations)}}

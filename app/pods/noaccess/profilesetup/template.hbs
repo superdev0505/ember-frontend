@@ -1,0 +1,73 @@
+<div class="container-main">
+
+	<div class="offlineOnly offlineBackground hidden"></div>
+	<div class="offlineOnly offlineAlert alert alert-danger hidden">
+		You are offline. Please reconnect to continue using Oslr.
+	</div>
+
+  <div class="header">
+    <div class="topbar-buttons row">
+      <h3>Welcome</h3>
+    </div>
+  </div>
+
+  <div class="subContainer subContainer-profilesetup">
+    <div class="containerBody containerBody-profilesetup">
+
+      <div class="setup-profile-form">
+
+        <p>
+          We need to know a few things about you to help you get the best learning experience.
+        </p>
+
+
+				{{select-locations-multi value=model.locations}}
+
+
+        <p>
+  				<label>{{fa-icon "stethoscope"}} What do you do?</label>
+
+					{{select-job-title value=model.jobTitle}}
+
+					{{#if model.jobTitle.qualified}}
+						<p>
+							<label>GMC number</label>
+							{{input type="number" value=model.gmc class="form-control gmc-field"}}
+						</p>
+					{{/if}}
+  			</p>
+
+
+
+        <p>
+  				<label>About You (optional)</label>
+  				{{textarea value=model.bio class="form-control aboutYou" placeholder="Tell colleagues a bit about you and what you want to teach or learn"}}
+  			</p>
+
+        <p>
+          <label>Upload a Photo</label>
+          <div class="small-subtext">
+            This is optional but will make it much easier for colleagues to connect with you.
+          </div>
+          {{picture-upload user=model}}
+        </p>
+
+        <p>
+          <button class='btn btn-default profile-setup-save-button' {{action 'saveProfile'}}>
+            Save
+          </button>
+        </p>
+
+				<p>
+					<a {{action 'logout'}}>
+						Sign in with a different account
+					</a>
+				</p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

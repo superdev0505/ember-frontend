@@ -1,0 +1,9 @@
+{{#scrolling-list model=model}}
+  {{#each model as |entry|}}
+    {{show-logbook-entry entry=entry}}
+  {{else}}
+    <div class="empty-logbook-text">
+      You have no logbook entries yet.
+    </div>
+  {{/each}}
+{{/scrolling-list}}

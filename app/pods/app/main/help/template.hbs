@@ -1,0 +1,39 @@
+<br/>
+<p>
+	{{#link-to 'noaccess.walkthrough' tagName='button' class="btn btn-default"}}
+		Launch Quick Start Guide
+	{{/link-to}}
+</p>
+
+<p>
+	<button {{action 'openLink' 'http://www.oslr.co.uk/faqs'}} class="btn btn-default">
+		Launch FAQs
+	</button>
+</p>
+<br/>
+
+<p class="text-center well">
+	We value your feedback - if you find any bugs in our app, or have ideas on
+	how to improve it then please do get in touch.
+
+	<br/>
+	<br/>
+
+	You are using Oslr version {{appVersion}}
+</p>
+
+<p>
+	<a class="btn btn-default text-center" {{action 'openLink' "http://www.oslr.co.uk/report-an-issue/"}}>
+		Report an issue
+	</a>
+</p>
+
+<p>
+	<a class="btn btn-default text-center" href="mailto:info@oslr.co.uk">
+		Email us<br/>
+		info@oslr.co.uk
+	</a>
+</p>
+
+
+{{bottom-navbar}}

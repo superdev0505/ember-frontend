@@ -1,0 +1,76 @@
+<div class="availability-info panel panel-default">
+  <div class="panel-heading">
+    Time and Place
+  </div>
+  <div class="panel-body text-left">
+    {{#if (eq availability.aasmState 'proposed')}}
+      WIP...
+
+    {{else}}
+
+      <div class="availability-times">
+        {{#if editTimes}}
+          <div class="text-center">
+            Start Time
+            {{datetimepicker-component value=availability.startTime}}
+            End Time
+            {{datetimepicker-component value=availability.endTime}}
+
+            <button class="btn btn-default" {{action 'saveTimes'}}>
+              Done
+            </button>
+          </div>
+
+        {{else}}
+
+          {{#if canEdit}}
+            <button class="pull-right" {{action 'toggleEditTimes'}}>
+              {{fa-icon 'pencil'}}
+            </button>
+          {{/if}}
+          {{fa-icon 'clock-o'}}
+          {{formatted-date date=availability.startTime}} -
+          {{formatted-date date=availability.endTime}}
+
+        {{/if}}
+      </div>
+
+      <div class="availability-place">
+        {{#if editPlace}}
+          <div class="text-center">
+            Hospital
+              {{#power-select options=locations selected=availability.location
+                class="availability-locations-select2"
+                placeholder="Which hospital are you teaching in?"
+                onchange=(action (mut availability.location)) as |loc|}}
+                {{loc.name}}
+              {{/power-select}}
+            <br/>
+            Where exactly are you meeting?
+            <br/>
+            {{input value=availability.locationInfo placeholder="Give an exact location e.g. a ward name" class="form-control"}}
+
+            <button class="btn btn-default" {{action 'savePlace'}}>
+              Done
+            </button>
+          </div>
+
+        {{else}}
+
+          {{#if canEdit}}
+            <button class="pull-right" {{action 'toggleEditPlace'}}>
+              {{fa-icon 'pencil'}}
+            </button>
+          {{/if}}
+          {{fa-icon 'map-marker'}}
+          {{availability.location.name}}
+          {{#if availability.locationInfo}}
+            : {{availability.locationInfo}}
+          {{/if}}
+
+        {{/if}}
+      </div>
+
+    {{/if}}
+  </div>
+</div>

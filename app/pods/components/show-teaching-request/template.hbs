@@ -1,0 +1,77 @@
+{{#link-to "app.main.availability-requests.show" model tagName="a"}}
+  <div class="{{model.id}} feed-availability row">
+
+    <div class="col-xs-3 feed-availability-pic">
+      {{user-avatar user=model.user size=96}}
+      <div class="feed-availability-request-votes">
+        <img src="images/menuIcons/thumbs_up_white.png" width=24 height=24 />
+        {{model.availabilityRequestVotesCount}}
+      </div>
+    </div>
+
+    <div class="col-xs-8 feed-availability-content">
+      <div class="feed-availability-request-info">
+
+
+        {{#if model.info}}
+          {{#truncate-multiline lines=3 showButton=false}}
+            {{model.info}}
+          {{/truncate-multiline}}
+        {{else}}
+          <i>No details of this request has been given</i>
+        {{/if}}
+      </div>
+
+      <div class="feed-availability-request-footer">
+        {{fa-icon 'map-marker'}} {{model.location.name}}
+        <br/>
+        By {{model.user.name}}
+        <br/>
+        Requested {{formatted-date date=model.createdAt}}
+      </div>
+    </div>
+
+    <div class="col-xs-1 feed-availability-rightarrow">
+
+    </div>
+
+  </div>
+{{/link-to}}
+
+
+
+
+{{#if false}}
+
+<div class='notification'>
+  <div class="info">
+    <div class="title">
+      "{{model.info}}"
+    </div>
+    <div class="text">
+
+      <div class="availability-request-show-info">
+        Requested by {{model.user.name}}
+      </div>
+
+      <div class="small-subtext">
+        {{#if model.user.jobTitle}}
+          {{model.user.jobTitle.name}}
+          <br/>
+        {{/if}}
+        {{fa-icon 'map-marker'}} {{model.location.name}}
+        <br/>
+        requested {{formatted-date date=model.createdAt}}
+      </div>
+    </div>
+  </div>
+  <div class="icon">
+		<div class="halfRing"><div class="ring"></div></div>
+
+		{{user-avatar user=model.user size=64}}
+
+
+	</div>
+</div>
+
+{{/if}}

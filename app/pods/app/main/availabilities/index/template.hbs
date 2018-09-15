@@ -1,0 +1,111 @@
+{{search-bar value=searchText placeholder="Search session description"}}
+
+{{#ember-remodal forService=true name='availability-filters-modal'}}
+
+  <div class="availability-filter-options well">
+
+    <h3>Filter by Hospital</h3>
+    {{select-locations-multi value=searchLocations}}
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Filter by Date
+      </div>
+      <div class="panel-body">
+        <div class="row">
+  				<div class="col-xs-6">
+  					From<br/>
+  					{{pikaday-input value=filterStartDate format='DD-MM-YYYY' class="form-control text-center"}}
+  				</div>
+  				<div class="col-xs-6">
+  					Until<br/>
+  					{{pikaday-input value=filterEndDate format='DD-MM-YYYY' class="form-control text-center"}}
+  				</div>
+  			</div>
+
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Session Type
+      </div>
+      <div class="panel-body">
+        <table>
+          <tr>
+            <td>{{radio-button value="all" groupValue=filterType}}</td>
+            <td>All sessions</td>
+          </tr>
+          <tr>
+            <td>{{radio-button value="taught" groupValue=filterType}}</td>
+            <td>Sessions I taught</td>
+          </tr>
+          <tr>
+            <td>{{radio-button value="attended" groupValue=filterType}}</td>
+            <td>Sessions I attended</td>
+          </tr>
+          <!--<tr>
+            <td>{{radio-button value="suggested" groupValue=filterType}}</td>
+            <td>Suggested sessions</td>
+          </tr>-->
+        </table>
+      </div>
+    </div>
+
+    <button {{action 'closeAvailabilityFilters'}} class="btn btn-default">
+      Done
+    </button>
+
+  </div>
+
+{{/ember-remodal}}
+
+<div class="availability-filters well">
+  Showing sessions with filters:
+  <br/>
+  {{fa-icon 'map-marker'}}
+  {{join ", " (map-by "name" searchLocations)}}
+
+  {{#if (or filterStartDate filterEndDate)}}
+    <br/>
+    {{fa-icon 'clock'}}
+    {{#if filterStartDate}}
+      From
+      {{formatted-date date=filterStartDate format="D/M/YY"}}
+    {{/if}}
+    {{#if filterEndDate}}
+      Until
+      {{formatted-date date=filterEndDate format='D/M/YY'}}
+    {{/if}}
+  {{/if}}
+</div>
+
+{{loading-spinner}}
+{{log model}}
+{{!-- {{#if loadedOnce}}
+  <div class="text-center">
+    Showing {{model.length}} Session{{#if (not-eq model.length 1)}}s{{/if}}
+  </div>
+{{/if}} --}}
+<div class="availability-scrolling-list-wrapper">
+  <div class="scrolling-list">
+    {{#each model as |availability|}}
+
+      {{feed-availability availability=availability}}
+
+
+    {{else}}
+      <div class="alert alert-default">
+        {{#if loadedOnce}}
+          No sessions matched your search criteria.
+        {{/if}}
+      </div>
+    {{/each}}
+
+    {{#if loadedOnce}}
+      <button class="btn btn-default" {{action 'loadMore'}}>
+        Load More
+      </button>
+    {{/if}}
+  </div>
+</div>

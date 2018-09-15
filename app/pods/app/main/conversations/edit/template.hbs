@@ -1,0 +1,119 @@
+  <div class="text-left">
+		<div class="text-center">
+      <div class="text-muted">
+        Group Name
+      </div>
+
+      {{#if isEditingName}}
+        {{input type='text' value=model.conversation.name class='form-control text-center conversation-name-edit-field' placeholder="Enter a name for your group"}}
+        <button {{action 'saveName'}}>
+          {{fa-icon 'check'}}
+        </button>
+        <button {{action 'cancelName'}}>
+          {{fa-icon 'times'}}
+        </button>
+      {{else}}
+        <button class="converation-name-edit" {{action 'toggleEditingName'}}>
+          <span class="conversation-name-edit-header">
+            {{model.conversation.name}}
+						{{!-- {{conversation-header conversation=model}} --}}
+					</span>
+					<small class="text-muted"><i>click to edit</i></small>
+        </button>
+      {{/if}}
+		</div>
+
+
+		<div>
+
+
+			{{#if model.availability}}
+				<br/>
+				<p>
+					{{!-- {{#link-to 'availabilities/show' model.availability}}
+						This conversation is linked to a teaching session.
+						Click to view session information.
+					{{/link-to}} --}}
+				</p>
+				<br/>
+			{{/if}}
+
+
+		</div>
+
+		<br/>
+		<p class="text-center">
+			{{!-- <button class="btn btn-default" {{action 'openModal' 'conversations/adduser' controller model}} data-toggle="modal" data-target="#myModal">
+				{{fa-icon "user-plus"}} Add To Group
+			</button> --}}
+
+      {{!-- <button class="btn btn-default" {{action 'showAllUsers'}}>
+				{{fa-icon "user-plus"}} Add To Group
+			</button> --}}
+      {{#ember-remodal forService=true as |modal|}}
+        {{#modal.open}}
+          <button class="btn btn-default">
+            {{fa-icon "user-plus"}} Add To Group
+          </button>
+        {{/modal.open}}
+        {{add-users model=model.conversation isJoin=true joinModel='conversation-member' joinArray=model.conversationMembers headerText='Add to Group' addButtonText="Add Users"}}
+      {{/ember-remodal}}
+
+      <div class="searchUsers hidden">
+        {{#each allUsers as |user|}}
+          <a {{action 'addUser' user}}>
+            {{user.name}}
+          </a>
+        {{/each}}
+      </div>
+		</p>
+
+
+		<br/>
+
+		<div class="row text-center">
+			<div class="col-xs-6">
+				<button {{action 'sendMessage'}} class="conversation-message-button">
+					{{fa-icon "comments" size=2}}
+					<br/>
+					message
+				</button>
+			</div>
+			<div class="col-xs-6">
+				<button {{action 'requestFeedback'}} class="conversation-feedback-button">
+					{{fa-icon "file-text" size=2}}
+					<br/>
+					feedback
+				</button>
+			</div>
+		</div>
+		<br/>
+
+		<div class="well">
+			<div class="text-muted">
+				{{!-- <b>People in this group ({{model.users.length}})</b> --}}
+			</div>
+			<div class="conversation-user-list">
+				{{#each model.conversationMembers as |join|}}
+					<div class="user-in-group">
+
+            {{#if join.admin}}
+              <div class="text-muted pull-right">admin</div>
+            {{/if}}
+
+						{{!-- {{user-avatar user=user size=24}} --}}
+						{{join.user.name}}
+
+					</div>
+				{{/each}}
+			</div>
+		</div>
+
+  </div>
+
+
+	<p class="text-center">
+		<button class="btn btn-danger" {{action 'leaveGroup'}}>
+			leave this group
+		</button>
+	</p>

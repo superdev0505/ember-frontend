@@ -1,0 +1,41 @@
+{{#if (eq session.currentUser.id message.user.id)}}
+	{{#if message.conversationId}}
+		<div class="messageContainer left" style="clear:both;">
+			<div class="message_pic">
+				{{!-- <img src="{{message.user.avatar_fullpath}}" height=40 width=40 /> --}}
+			</div>
+			<div class="speachBubble">
+				<div class="is-by-current-user message" style="clear:both;">
+					<p>{{message.body}}</p>
+				</div>
+				<div class="is-by-current-user small message-footer">
+					{{formatted-date date=message.createdAt}} -
+					{{message.user.name}}
+
+				</div>
+			</div>
+		</div>
+	{{/if}}
+{{else}}
+
+	<div class="messageContainer right" style="clear:both;">
+		<div class="speachBubble">
+			<div class="is-by-current-user message" style="clear:both;">
+				<p>{{message.body}}</p>
+			</div>
+			<div class="is-by-current-user small message-footer">
+				{{formatted-date date=message.createdAt}} -
+				{{message.user.name}}
+
+        {{!-- {{#modal-button modalName='reports/new' myControllerName='reports/new' myModel=message}}
+      		{{fa-icon 'flag'}}
+      	{{/modal-button}} --}}
+
+			</div>
+
+		</div>
+		<div class="message_pic">
+			{{!-- <img src="{{message.user.avatar_fullpath}}" height=40 width=40 /> --}}
+		</div>
+	</div>
+{{/if}}

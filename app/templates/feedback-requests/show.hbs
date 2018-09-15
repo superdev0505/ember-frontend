@@ -1,0 +1,105 @@
+<div class="container-main">
+
+
+  <div class="header">
+  	<div class="topbar-buttons row">
+  		<div class="col-xs-3 topbar-button secondary-cta">
+
+        <!-- Secondary action button -->
+  			{{!-- {{outlet 'secondaryButton'}} --}}
+        {{#if session.data.authenticated.user_id}}
+          <button class="backBTN" onclick="window.history.back();">
+            Back
+          </button>
+        {{/if}}
+
+
+  		</div>
+
+  		<div class="col-xs-6 topbar-button main-heading">
+
+        <h3>Feedback</h3>
+
+  		</div>
+
+  		<div class="col-xs-3 topbar-button primary-cta">
+
+        {{outlet 'primaryButton'}}
+
+  		</div>
+
+
+  	</div>
+
+
+  </div>
+
+  <div class="subContainer">
+    <div class="containerBody">
+
+      {{#if model}}
+        {{#if model.feedback}}
+          You have already submitted feedback for this request.
+
+          <hr/>
+
+          {{feedback-show feedback=model.feedback}}
+        {{else}}
+
+          <div class="text-left feedback-request-header">
+            <div class='pull-left'>{{user-avatar user=model.user size=64}}</div>
+            {{model.user.name}} requested feedback for teaching at {{formatted-date date=model.availability.startTime}}
+            <div class="text-muted footer">
+              {{formatted-date date=model.createdAt}}
+            </div>
+          </div>
+          <hr/>
+
+          <div class="feedback-header-arrows">
+            <div class="pull-left">&larr;disagree</div>
+            <div class="pull-right">agree&rarr;</div>
+          </div>
+          <div style="clear:both;"></div>
+          {{#each feedbackQuestions as |question index|}}
+            <div class="feedback-request question {{question.questionType}}">
+              <h4>{{question.title}}</h4>
+              {{#if (eq question.questionType 'likert')}}
+                {{#each (array 1 2 3 4 5) as |i|}}
+                  <button class="feedback-request-likert-option question-{{index}} option-{{i}}" {{action 'selectLikert' index i}}>
+                    {{i}}
+                  </button>
+                {{/each}}
+              {{else}}
+                {{textarea class='form-control response-text' classNameBindings="index" value=(object-at index responses) key-up='updateResponses'}}
+              {{/if}}
+            </div>
+          {{/each}}
+
+        {{/if}}
+
+      {{else}}
+        <h4>Request not found</h4>
+
+        Sorry, the request link doesn't seem to be valid. Please try again.
+      {{/if}}
+
+
+
+    </div>
+  </div>
+
+  <div class="navbar-footer feedback-request-footer">
+    {{#if model.feedback}}
+      {{#if session.data.authenticated.user_id}}
+        <button class="btn btn-default" onclick="window.history.back();">
+          Back
+        </button>
+      {{/if}}
+    {{else}}
+      <button {{action 'submitFeedback'}} class="btn btn-default submit-feedback-request-button">
+        Submit Feedback
+      </button>
+    {{/if}}
+  </div>
+
+</div>

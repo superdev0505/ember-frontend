@@ -1,0 +1,96 @@
+
+{{!-- Teacher interface for requesting feedback
+TODO: make sure this is shown to correct people if multiple teachers --}}
+{{#if canEdit}}
+
+  {{!-- Existing feedback --}}
+  {{#if (gt model.feedbacks.length 0)}}
+    {{#each model.feedbacks as |feedback|}}
+      {{#ember-remodal as |modal|}}
+        {{#modal.open}}
+        <div class="feedback" style="clear:both;">
+          <div class="pull-left">
+            {{user-avatar user=feedback.user size=36}}
+          </div>
+          Feedback from {{feedback.user.name}}
+          <br/>
+          <div class="footer-text">
+            Submitted at {{formatted-date date=feedback.createdAt}}
+          </div>
+        </div>
+        {{/modal.open}}
+
+        {{feedback-show feedback=feedback}}
+
+        <hr/>
+        Submitted by {{feedback.user.name}} at {{formatted-date date=feedback.createdAt}}
+      {{/ember-remodal}}
+
+    {{/each}}
+  {{else}}
+    You haven't received any feedback yet.
+  {{/if}}
+  <hr/>
+
+  {{!-- Outstanding feedback requests --}}
+  <h4>Outstanding feedback requests</h4>
+
+  {{#each (reject-by 'feedback.id' model.feedbackRequests) as |fr|}}
+    <div class="feedback-request">
+        {{fr.target.name}}
+    </div>
+  {{else}}
+    <div class="footer-text">
+      none
+    </div>
+  {{/each}}
+
+  <hr/>
+  {{!-- People who feedback can be requested from --}}
+  {{#if (gt attendedNoRequests.length 0)}}
+    <h4>Request feedback from:</h4>
+    <button {{action 'requestFeedbackAll'}} class="all-feedback-button btn btn-default">
+      Request feedback from everyone
+    </button>
+
+    {{#each attendedNoRequests as |user|}}
+      <button class="attended-user" {{action 'requestFeedback' user}}>
+        {{user-avatar user=user size=64}}
+        {{user.name}}
+
+        {{!-- <br/>
+        {{#each (filter-by "user" user model.feedbackRequests) as |fr|}}
+          {{fr}}
+        {{else}}
+          <button {{action 'requestFeedback' user}}>
+            Request feedback from {{user.name}}
+          </button>
+        {{/each}} --}}
+      </button>
+    {{/each}}
+
+
+    {{#ember-remodal forService=true name='newFeedbackRequestModal'}}
+      Requesting feedback from:
+      {{#each usersForFeedback as |user|}}
+        <div>
+          {{user-avatar user=user size=32}}{{user.name}}
+        </div>
+      {{/each}}
+
+      <hr/>
+      <b>Enter a message (optional)</b>
+      {{textarea value=feedbackRequestMessage class="form-control feedback-request-message-field" placeholder="If you wish you can enter a personal message to the person you're requesting feedback from."}}
+
+      <hr/>
+      <button class="btn btn-default" {{action 'sendFeedbackRequest'}}>
+        Send Request
+      </button>
+      <button class="btn btn-default" {{action 'cancelFeedbackRequest'}}>
+        Cancel
+      </button>
+    {{/ember-remodal}}
+
+  {{/if}}
+
+{{/if}}

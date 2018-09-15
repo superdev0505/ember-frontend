@@ -1,0 +1,118 @@
+
+{{#each model.availabilityItems as |link|}}
+
+  {{show-resource link=link}}
+
+
+{{else}}
+  No resources have been posted for this teaching session
+{{/each}}
+
+{{#if canEdit}}
+  <hr/>
+  <button class="btn btn-default toggle-add-resource-button" {{action 'toggleAddResource'}}>
+    {{fa-icon "plus"}} Add Resource
+	</button>
+
+  {{#if showAddResource}}
+    <div>
+      <p>
+        Add teaching resources such as recommended reading and useful websites for your students.
+      </p>
+
+
+
+      <div class="row resource-type-buttons text-center">
+        <h4>What kind of resource do you want to add?</h4>
+        <div class="col-xs-6">
+          <button {{action 'selectResourceType' 'book'}}>
+            {{fa-icon 'book' size=2}}
+          </button>
+        </div>
+        <div class="col-xs-6">
+          <button {{action 'selectResourceType' 'link'}}>
+            {{fa-icon 'link' size=2}}
+          </button>
+        </div>
+      </div>
+
+      <div class="resource-type resource-type-link hidden text-center">
+        <h4>Helpful Websites</h4>
+        <p>
+          <div class="form-group">
+            <label>Web address</label>
+            {{input type='text' value=websiteUrl class="form-control text-center link-search-field" placeholder="Web address"}}
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            {{input type='text' value=websiteDescription class="form-control text-center" placeholder="Short description"}}
+          </div>
+          <div class="form-group">
+            <label>Notes for your students</label>
+            {{input type='text' value=websiteNotes class="form-control text-center" placeholder="Why read this?"}}
+          </div>
+          <button {{action 'saveWebsite'}} class='btn btn-default'>
+            Save
+          </button>
+        </p>
+      </div>
+
+
+      <div class="resource-type resource-type-book hidden">
+    		<div class="text-center">
+        	<h4>Recommended Reading</h4>
+    	    <p>
+    	      {{input type='text' value=bookSearchText class="form-control text-center book-search-field" placeholder="Enter the name of a textbook and click Search"}}
+    	      <button {{action "searchKortext"}} class="btn btn-default">Search</button>
+    	    </p>
+    		</div>
+        <div id="kortext-results">
+          <div class="kortext-loading"></div>
+          {{#each kortextResults as |book|}}
+            <a {{action 'selectTextbook' book}}>
+              <div class='kortext-book'>
+                <table>
+                  <tr>
+                    <td>
+                      <img width=36 src='{{book.img}}' />
+                    </td>
+                    <td>
+                      {{book.name}}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </a>
+    			{{else}}
+    				{{#if doneKortextSearch}}
+    					<div class="text-center">
+    						No books matched your search.
+    					</div>
+    				{{/if}}
+          {{/each}}
+
+          {{#if selectedTextbook}}
+            <div class='kortext-book'>
+              <table>
+                <tr>
+                  <td>
+                    <img width=36 src='{{selectedTextbook.img}}' />
+                  </td>
+                  <td>
+                    {{selectedTextbook.name}}
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <label>Notes for your students about this book</label>
+            {{input type='text' value=textbookNotes class='form-control selected-kortext-notes-field' placeholder='Optional - tell your students why they should read this'}}
+
+            <button {{action 'saveTextbook'}} class="btn btn-default">
+              Recommend Book
+            </button>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{/if}}
+{{/if}}

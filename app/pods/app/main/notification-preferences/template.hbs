@@ -1,0 +1,124 @@
+<div class="notification-preferences">
+
+  <div class="well text-left">
+    We send you notifications using both push notifications and email.
+    These are crucial to get the best experience from the app, but we understand
+    that too many can be annoying. You can use the form below to select exactly when
+    and how you want to be notified.
+  </div>
+
+  <div>
+    <h4>{{fa-icon "phone"}} Push Notifications</h4>
+    <button class="btn btn-default" {{action 'selectAllPush'}}>
+      Turn on all
+    </button>
+    <button class="btn btn-default" {{action 'deselectAllPush'}}>
+      Turn off all
+    </button>
+  </div>
+
+  <div>
+    <h4>{{fa-icon "envelope"}} Email Notifications</h4>
+    <button class="btn btn-default" {{action 'selectAllEmail'}}>
+      Turn on all
+    </button>
+    <button class="btn btn-default" {{action 'deselectAllEmail'}}>
+      Turn off all
+    </button>
+  </div>
+  <br/>
+  <div class="text-center">
+    or select by notification type:
+  </div>
+
+  <table class="notification-form-table">
+    <tr>
+      <th class="left"></th>
+      <th class="middle">{{fa-icon "phone"}}</th>
+      <th class="right">{{fa-icon "envelope"}}</th>
+    </tr>
+
+    <tr>
+      <td class="left">I receive a private message</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_conversation_create}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_conversation_create}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">A teaching session is advertised which matches my interests</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_create}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_create}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">Someone requests teaching</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availabilityrequest_create}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availabilityrequest_create}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">I am invited to a teaching session</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_invite}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_invite}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">I receive a feedback request</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_feedbackrequest_create}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_feedbackrequest_create}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">I receive feedback about my teaching</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_feedback_create}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_feedback_create}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">A student signs up to a session I am teaching</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_sign_up}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_sign_up}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">A student cancels for a session I am teaching</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_cancel}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_cancel}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">Details are changed for a session I am attending</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_update}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_update}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">New resources are posted for a session I am attending</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_create_resource}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_create_resource}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">A session I am attending is cancelled</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_destroy}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_destroy}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">Someone accepts an invite to my session</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_accept_invite}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_accept_invite}}</td>
+    </tr>
+
+    <tr>
+      <td class="left">Someone rejects an invite to my session</td>
+      <td class="middle">{{input type='checkbox' class="form-control" checked=model.push_availability_reject_invite}}</td>
+      <td class="right">{{input type='checkbox' class="form-control" checked=model.email_availability_reject_invite}}</td>
+    </tr>
+  </table>
+
+</div>
+
+{{#page-footer}}
+  <button {{action 'savePreferences'}} class="btn btn-default save-preferences-button">Save</button>
+{{/page-footer}}

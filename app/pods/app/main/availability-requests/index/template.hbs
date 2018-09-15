@@ -1,0 +1,12 @@
+{{search-bar value=searchText}}
+{{#scrolling-list model=model}}
+  {{#each model as |ar|}}
+    {{#link-to 'app.main.availability-requests.show' ar}}
+      <div class='teaching-request'>
+        {{show-teaching-request model=ar}}
+      </div>
+    {{/link-to}}
+  {{else}}
+    No teaching requests have been posted in your hospital.
+  {{/each}}
+{{/scrolling-list}}

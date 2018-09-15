@@ -1,0 +1,78 @@
+<hr/>
+
+{{#if admin}}
+  {{#ember-remodal onConfirm='sendInvites' as |modal|}}
+    {{#modal.open}}
+      <div class='open-add-users-popup'>
+        {{fa-icon 'user-plus'}} Add
+      </div>
+    {{/modal.open}}
+    {{#modal.confirm}}
+      <button class="add-users-close-button do-add-users-button">
+        done
+      </button>
+      {{!-- Anything you put here will close the modal on click and fire the 'onConfirm' action --}}
+    {{/modal.confirm}}
+
+    <div class="add-users-top">
+      <h5>Invited Users</h5>
+
+      <div class="availability-invites-added-users-wrapper">
+        <div class="availability-invites-added-users added-users">
+          {{#each availability.availabilityUsers as |join|}}
+            <div class="added-user">
+              {{#if (eq join.aasmState 'new')}}
+                <button {{action 'removeUser' join}} class="added-user-remove-button">
+                  {{fa-icon 'times' size=2}}
+                </button>
+              {{/if}}
+              <div class="added-user-avatar">
+                {{user-avatar user=join.user size=30}}
+              </div>
+              <div class="added-user-name">
+                {{join.user.name}}
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+
+      {{input value=searchQuery class="form-control add-user-search-input" placeholder="Search"}}
+    </div>
+
+    <div class="add-users-bottom add-user-search-results">
+
+      {{#each usersList as |user|}}
+        <div class="addable-user add-user-search-result">
+          {{user.name}}
+          <button {{action 'addUser' user}} class='add-user-button'>{{fa-icon 'plus'}}</button>
+        </div>
+      {{else}}
+        No names matched your search.
+        <br/>
+        Enter an email to invite a colleague to Oslr.
+      {{/each}}
+
+    </div>
+
+  {{/ember-remodal}}
+{{/if}}
+
+
+{{#each availability.availabilityUsers as |join|}}
+  <div class="invited-users-list-item  availability-user row">
+    <div class="col-xs-2">
+      {{user-avatar user=join.user size=40}}
+    </div>
+    <div class="col-xs-10">
+      {{join.user.name}}
+      <br/>
+      <span class="small-subtext">
+        {{#if join.teacher}}Teacher{{else}}Student{{/if}}
+         -
+        {{join.aasmState}}
+      </span>
+    </div>
+
+  </div>
+{{/each}}

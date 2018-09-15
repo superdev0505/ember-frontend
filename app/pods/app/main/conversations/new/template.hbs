@@ -1,0 +1,88 @@
+{{!-- <p>
+  Enter a name for this group
+</p>
+
+<p>
+  {{input value=groupName type='text' class="form-control newConversationField"}}
+</p>
+
+
+<p>
+  <button class="btn btn-default" {{action 'createConversation'}}>
+    Create Group
+  </button>
+</p> --}}
+
+
+<div class='new-group-button'>
+  {{#if newGroup}}
+    <div class="row">
+      <div class="col-xs-3 pull-left">
+        <a {{action 'toggleNewGroup'}}>
+          Cancel
+        </a>
+      </div>
+      <div class="col-xs-6 text-center">
+        {{groupMembers.length}} people selected
+      </div>
+      <div class="col-xs-3 text-right">
+        <a {{action 'createGroup'}}>
+          Next
+        </a>
+      </div>
+    </div>
+  {{else}}
+    <div class="text-center">
+      <a {{action 'toggleNewGroup'}}>
+        Create New Group
+      </a>
+    </div>
+  {{/if}}
+</div>
+
+
+<div class="filter-bar">
+	<div class="input-group users-search-group">
+		<span class="input-group-addon ">
+			Search
+		</span>
+
+		{{input value=newConversationSearchText class="form-control searchInput" placeholder="Search for people in your hospitals"}}
+	</div>
+</div>
+
+{{loading-spinner startHidden=false}}
+
+<div class="new-message-users-list">
+  {{!-- TODO: Use ember-collection to radically improve rendering --}}
+{{#each filteredContacts as |user|}}
+{{!-- {{#ember-collection items=filteredContacts cell-layout=(fixed-grid-layout estimated-width 45) as |user index|}} --}}
+{{!-- {{#ember-collection items=filteredContacts cell-layout=(percentage-columns-layout filteredContacts.length [100] 50) as |user index|}} --}}
+<a {{action 'messageUser' user}}>
+  <div class="new-group-user">
+    <div class="pull-right">
+      {{#if newGroup}}
+        {{#if (contains user groupMembers)}}
+          {{fa-icon 'check-circle'}}
+        {{else}}
+          {{fa-icon 'circle-o'}}
+        {{/if}}
+      {{else}}
+        {{fa-icon "arrow-right"}}
+      {{/if}}
+    </div>
+
+    <div class="new-group-user-name">
+      {{user.name}}
+    </div>
+    <div class="new-group-user-info">
+      {{user.jobTitle.name}} at
+      {{#each user.userLocations as |userLocation|}}
+        {{userLocation.location.name}}
+      {{/each}}
+    </div>
+  </div>
+</a>
+{{!-- {{/ember-collection}} --}}
+{{/each}}
+</div>

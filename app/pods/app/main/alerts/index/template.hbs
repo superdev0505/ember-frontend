@@ -1,0 +1,57 @@
+{{loading-spinner}}
+{{!-- {{#each sortedModels as |alert|}}
+  <div class="alert {{if alert.unread 'unread'}}">
+    <a href={{alert.readLink}}>
+      {{alert.text}}
+    </a>
+  </div>
+{{/each}} --}}
+
+
+{{#each sortedModels as |alert|}}
+  <div class="alert {{if alert.unread 'unread'}}">
+    {{!-- <a href={{alert.readLink}} > --}}
+    <a {{action (route-action 'readAlert' alert.readLink) }}>
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="icon">
+      			<div class="halfRing"><div class="ring"></div></div>
+      			{{#if (eq alert.targetType "Message")}}
+      			   <img src="images/MessageIcon.png" width=48 height=48>
+            {{/if}}
+            {{#if (eq alert.targetType "Availability")}}
+      			   <img src="images/mortar_board.png" width=48 height=48>
+            {{/if}}
+            {{#if (eq alert.targetType "FeedbackRequest")}}
+      			   <img src="images/messageIcon.png" width=48 height=48>
+            {{/if}}
+            {{#if (eq alert.targetType "Feedback")}}
+      			   <img src="images/messageIcon.png" width=48 height=48>
+            {{/if}}
+      		</div>
+        </div>
+        <div class="col-xs-9 text-left">
+          {{alert.text}}
+
+          <div class="alert-footer">
+            {{moment-from-now alert.createdAt}}
+          </div>
+        </div>
+      </div>
+
+    </a>
+  </div>
+{{else}}
+  You have no alerts yet.
+{{/each}}
+
+
+{{!-- {{#each groupedAlerts as |alerts|}}
+  <div class="alert-group {{if alert.unread 'unread'}}">
+    <a href={{alert.readLink}}>
+      {{alert.text}}
+    </a>
+  </div>
+{{/each}} --}}
+
+{{bottom-navbar}}

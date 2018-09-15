@@ -1,0 +1,44 @@
+<div class="jumbotron jumbotron-hero login-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-sm-push-7 img-holder">
+							<img class="img-product" sizes="(min-width: 768px) 696px, 348px" src="images/product-iphone2.png" alt="">
+						</div>
+
+            <div class="col-sm-7 col-sm-pull-5 text-holder">
+                <h1 style="margin-bottom: 0px; margin-left: -5px;">Oslr</h1>
+								<h2 style="margin-top: 5px;">Patient Centred Learning</h2>
+
+								<div class="login-form-container">
+
+
+
+                  <h4 class="text-center"><b>{{session.currentUser.email}}</b></h4>
+
+                  <div class="text-center">
+                    We've sent you a confirmation code. Please enter it here to confirm you own this email address.
+                  </div>
+
+                  <br/>
+                  <div class="text-center">
+                    {{input class="form-control text-center confirmation-code-field" placeholder="Enter Code" value=enteredCode}}
+
+                    <button {{action 'submitCode'}} class="btn btn-default submit-confirmation-code-button">Submit</button>
+
+
+                    <button class="btn btn-default btn-confirmation confirmation-resend-button" {{action "resendConfirmationEmail"}}>
+                    	Resend confirmation code
+                    </button>
+
+                    <button {{action "logout"}} class="btn btn-default btn-confirmation confirmation-logout-button">
+                      Sign in with a different email address
+                    </button>
+                  </div>
+
+
+
+								</div>
+            </div>
+        </div>
+    </div>
+</div>

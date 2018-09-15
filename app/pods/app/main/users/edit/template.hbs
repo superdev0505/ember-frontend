@@ -1,0 +1,70 @@
+<div class="userProfile">
+
+	{{#if session.currentUser.incompleteProfile}}
+		<div class="alert alert-danger profile-incomplete-message">
+			We need to know a bit more about you
+		</div>
+	{{/if}}
+
+	<div class="panel">
+		<div class="panel-body">
+
+			{{picture-upload user=model}}
+
+			<div class="user-profile-name">
+				{{#if editingUserName}}
+					<label>Your Name</label>
+					{{input type="text" value=model.name class="form-control editUserNameField"}}
+					{{!-- <button {{action 'saveUserName'}} class="btn btn-default saveUserNameButton">Save</button> --}}
+				{{else}}
+					<h3 class="user-profile-name">
+						{{model.name}}
+
+						<a {{action 'toggleEditingUserName'}} class="text-muted toggle-edit-user-name-button">
+							{{fa-icon 'pencil-square-o'}}
+						</a>
+					</h3>
+				{{/if}}
+				<div class="text-muted">
+					<small><i>
+						this is your name as others will see it
+					</i></small>
+				</div>
+				<br/>
+
+			</div>
+
+
+
+			<p>
+				<label>Job Title</label>
+				{{select-job-title value=model.jobTitle}}
+			</p>
+
+			{{#if model.jobTitle.qualified}}
+				<p>
+					<label>GMC number</label>
+					{{input type="number" value=model.gmc class="form-control gmc-field"}}
+				</p>
+			{{/if}}
+
+			Where do you work?
+			{{!-- TODO this should use changeset rather than model --}}
+			{{select-locations-multi value=model.locations}}
+
+			<p>
+				<label>About You</label>
+				{{textarea value=model.bio class="form-control aboutYou" placeholder="Tell colleagues a bit about you and what you want to teach or learn"}}
+			</p>
+
+
+
+		</div>
+	</div>
+</div>
+
+{{#page-footer}}
+	<button {{action 'doneEditing'}} class="btn btn-default save-profile-button">Save</button>
+
+	<button {{action 'undoChanges'}} class="btn btn-default undo-profile-button">Cancel</button>
+{{/page-footer}}

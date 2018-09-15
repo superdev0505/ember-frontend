@@ -1,0 +1,2820 @@
+{
+    "project": {
+        "name": "oslr-ui",
+        "description": "Small description for oslr-ui goes here",
+        "version": "0.0.0.4f83e22d"
+    },
+    "files": {
+        "app/adapters/application.js": {
+            "name": "app/adapters/application.js",
+            "modules": {},
+            "classes": {
+                "adapter-application": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/authenticators/oslr.js": {
+            "name": "app/authenticators/oslr.js",
+            "modules": {},
+            "classes": {
+                "authenticator-oslr": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/authorizers/devise.js": {
+            "name": "app/authorizers/devise.js",
+            "modules": {},
+            "classes": {
+                "authorizers-devise": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/initializers/globals.js": {
+            "name": "app/initializers/globals.js",
+            "modules": {},
+            "classes": {
+                "initializers-globals": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/initializers/simple-auth-setup.js": {
+            "name": "app/initializers/simple-auth-setup.js",
+            "modules": {},
+            "classes": {
+                "initializers-simple-auth-setup": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/alert.js": {
+            "name": "app/models/alert.js",
+            "modules": {
+                "Alerts": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/alertable.js": {
+            "name": "app/models/alertable.js",
+            "modules": {},
+            "classes": {
+                "model-alertable": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/availability-request-vote.js": {
+            "name": "app/models/availability-request-vote.js",
+            "modules": {},
+            "classes": {
+                "model-availability-request-vote": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/availability-request.js": {
+            "name": "app/models/availability-request.js",
+            "modules": {
+                "AvailabilityRequests": 1
+            },
+            "classes": {
+                "model-availability-request": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/availability-user.js": {
+            "name": "app/models/availability-user.js",
+            "modules": {
+                "AvailabilitiesSignUp": 1
+            },
+            "classes": {
+                "model-availability-user": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/availability.js": {
+            "name": "app/models/availability.js",
+            "modules": {
+                "Availabilities": 1
+            },
+            "classes": {
+                "model-availability": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/conversation-member.js": {
+            "name": "app/models/conversation-member.js",
+            "modules": {},
+            "classes": {
+                "model-conversation-user": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/conversation.js": {
+            "name": "app/models/conversation.js",
+            "modules": {},
+            "classes": {
+                "model-conversation": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/email-account.js": {
+            "name": "app/models/email-account.js",
+            "modules": {},
+            "classes": {
+                "model-alert": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/job-title.js": {
+            "name": "app/models/job-title.js",
+            "modules": {},
+            "classes": {
+                "model-job-title": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/location.js": {
+            "name": "app/models/location.js",
+            "modules": {},
+            "classes": {
+                "model-location": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/message.js": {
+            "name": "app/models/message.js",
+            "modules": {
+                "Messages": 1
+            },
+            "classes": {
+                "model-message": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/user-location.js": {
+            "name": "app/models/user-location.js",
+            "modules": {},
+            "classes": {
+                "model-user-location": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/user.js": {
+            "name": "app/models/user.js",
+            "modules": {},
+            "classes": {
+                "model-user": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/about/route.js": {
+            "name": "app/pods/app/main/about/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.about": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/alerts/index/controller.js": {
+            "name": "app/pods/app/main/alerts/index/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.alerts.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/alerts/index/route.js": {
+            "name": "app/pods/app/main/alerts/index/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.alerts.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/completed/controller.js": {
+            "name": "app/pods/app/main/availabilities/completed/controller.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/completed/route.js": {
+            "name": "app/pods/app/main/availabilities/completed/route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/confirmed/controller.js": {
+            "name": "app/pods/app/main/availabilities/confirmed/controller.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/confirmed/route.js": {
+            "name": "app/pods/app/main/availabilities/confirmed/route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/index/controller.js": {
+            "name": "app/pods/app/main/availabilities/index/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availabilities.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/index/route.js": {
+            "name": "app/pods/app/main/availabilities/index/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/from-request/route.js": {
+            "name": "app/pods/app/main/availabilities/new/from-request/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.new.from-request": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/preview/controller.js": {
+            "name": "app/pods/app/main/availabilities/new/preview/controller.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/preview/route.js": {
+            "name": "app/pods/app/main/availabilities/new/preview/route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/quick/controller.js": {
+            "name": "app/pods/app/main/availabilities/new/quick/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availabilities.new.preview": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/quick/route.js": {
+            "name": "app/pods/app/main/availabilities/new/quick/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.new.preview": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/what/route.js": {
+            "name": "app/pods/app/main/availabilities/new/what/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.new.what": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/when/route.js": {
+            "name": "app/pods/app/main/availabilities/new/when/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.new.when": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/who/route.js": {
+            "name": "app/pods/app/main/availabilities/new/who/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.new.who": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/controller.js": {
+            "name": "app/pods/app/main/availabilities/new/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availabilities.new": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/new/route.js": {
+            "name": "app/pods/app/main/availabilities/new/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.new": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/proposed/controller.js": {
+            "name": "app/pods/app/main/availabilities/proposed/controller.js",
+            "modules": {
+                "Unclassified": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/proposed/route.js": {
+            "name": "app/pods/app/main/availabilities/proposed/route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/edit/controller.js": {
+            "name": "app/pods/app/main/availabilities/show/edit/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availabilities.show.edit": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/edit/route.js": {
+            "name": "app/pods/app/main/availabilities/show/edit/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.show.edit": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/feedback/route.js": {
+            "name": "app/pods/app/main/availabilities/show/feedback/route.js",
+            "modules": {},
+            "classes": {
+                "route app.main.availabilities.show.feedback": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/index/controller.js": {
+            "name": "app/pods/app/main/availabilities/show/index/controller.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/index/route.js": {
+            "name": "app/pods/app/main/availabilities/show/index/route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/messages/controller.js": {
+            "name": "app/pods/app/main/availabilities/show/messages/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availabilities.show.messages": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/messages/route.js": {
+            "name": "app/pods/app/main/availabilities/show/messages/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.show.messages": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/users/controller.js": {
+            "name": "app/pods/app/main/availabilities/show/users/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availabilities.show.users": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/users/route.js": {
+            "name": "app/pods/app/main/availabilities/show/users/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.show.users": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/controller.js": {
+            "name": "app/pods/app/main/availabilities/show/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availabilities.show.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availabilities/show/route.js": {
+            "name": "app/pods/app/main/availabilities/show/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availabilities.show.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availability-requests/index/controller.js": {
+            "name": "app/pods/app/main/availability-requests/index/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availability-requests.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availability-requests/index/route.js": {
+            "name": "app/pods/app/main/availability-requests/index/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availability-requests.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availability-requests/new/controller.js": {
+            "name": "app/pods/app/main/availability-requests/new/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availability-requests-new": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availability-requests/new/route.js": {
+            "name": "app/pods/app/main/availability-requests/new/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availability-requests-new": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availability-requests/show/controller.js": {
+            "name": "app/pods/app/main/availability-requests/show/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.availability-requests.show": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/availability-requests/show/route.js": {
+            "name": "app/pods/app/main/availability-requests/show/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.availability-requests.show": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/conversations/edit/controller.js": {
+            "name": "app/pods/app/main/conversations/edit/controller.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/conversations/edit/route.js": {
+            "name": "app/pods/app/main/conversations/edit/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.conversation.edit": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/conversations/index/controller.js": {
+            "name": "app/pods/app/main/conversations/index/controller.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/conversations/index/route.js": {
+            "name": "app/pods/app/main/conversations/index/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.conversations.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/conversations/new/controller.js": {
+            "name": "app/pods/app/main/conversations/new/controller.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/conversations/new/route.js": {
+            "name": "app/pods/app/main/conversations/new/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.conversations.new": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/conversations/show/route.js": {
+            "name": "app/pods/app/main/conversations/show/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.conversation.show": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/feedbacks/index/controller.js": {
+            "name": "app/pods/app/main/feedbacks/index/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.feedbacks.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/feedbacks/index/route.js": {
+            "name": "app/pods/app/main/feedbacks/index/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.feedbacks.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/feedbacks/show/controller.js": {
+            "name": "app/pods/app/main/feedbacks/show/controller.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/feedbacks/show/route.js": {
+            "name": "app/pods/app/main/feedbacks/show/route.js",
+            "modules": {},
+            "classes": {
+                "route app.main.feedbacks.show": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/help/controller.js": {
+            "name": "app/pods/app/main/help/controller.js",
+            "modules": {
+                "Help": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/help/route.js": {
+            "name": "app/pods/app/main/help/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.help": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/learn/controller.js": {
+            "name": "app/pods/app/main/home/learn/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.home.learn": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/learn/route.js": {
+            "name": "app/pods/app/main/home/learn/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.home.learn": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/log/controller.js": {
+            "name": "app/pods/app/main/home/log/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.home.log": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/log/route.js": {
+            "name": "app/pods/app/main/home/log/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.home.log": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/more/controller.js": {
+            "name": "app/pods/app/main/home/more/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.home.more": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/more/route.js": {
+            "name": "app/pods/app/main/home/more/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.home.more": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/teach/controller.js": {
+            "name": "app/pods/app/main/home/teach/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.home.teach": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/teach/route.js": {
+            "name": "app/pods/app/main/home/teach/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.home.teach": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/home/route.js": {
+            "name": "app/pods/app/main/home/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.home": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/users/account/controller.js": {
+            "name": "app/pods/app/main/users/account/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.users.account": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/users/account/route.js": {
+            "name": "app/pods/app/main/users/account/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.users.account": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/users/edit/controller.js": {
+            "name": "app/pods/app/main/users/edit/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-app.main.users.edit": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/users/edit/route.js": {
+            "name": "app/pods/app/main/users/edit/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.users.edit": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/users/index/controller.js": {
+            "name": "app/pods/app/main/users/index/controller.js",
+            "modules": {
+                "Directory": 1
+            },
+            "classes": {
+                "controller-app.main.users.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/users/index/route.js": {
+            "name": "app/pods/app/main/users/index/route.js",
+            "modules": {},
+            "classes": {
+                "route-app.main.users.index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/main/route.js": {
+            "name": "app/pods/app/main/route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/app/route.js": {
+            "name": "app/pods/app/route.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/auth/login/controller.js": {
+            "name": "app/pods/auth/login/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-auth.login": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/auth/login/route.js": {
+            "name": "app/pods/auth/login/route.js",
+            "modules": {},
+            "classes": {
+                "route-auth.login": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/auth/registration/controller.js": {
+            "name": "app/pods/auth/registration/controller.js",
+            "modules": {},
+            "classes": {
+                "controller-auth.registration": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/auth/route.js": {
+            "name": "app/pods/auth/route.js",
+            "modules": {},
+            "classes": {
+                "route-auth": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/availability-invites/component.js": {
+            "name": "app/pods/components/availability-invites/component.js",
+            "modules": {},
+            "classes": {
+                "component-availability-invites": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/bottom-navbar/component.js": {
+            "name": "app/pods/components/bottom-navbar/component.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/email-account/component.js": {
+            "name": "app/pods/components/email-account/component.js",
+            "modules": {
+                "Users": 1
+            },
+            "classes": {
+                "component-email-account": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/home-teaching-requests/component.js": {
+            "name": "app/pods/components/home-teaching-requests/component.js",
+            "modules": {},
+            "classes": {
+                "component-home-teaching-requests": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/messages-list/component.js": {
+            "name": "app/pods/components/messages-list/component.js",
+            "modules": {},
+            "classes": {
+                "component-messages-list": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/page-footer/component.js": {
+            "name": "app/pods/components/page-footer/component.js",
+            "modules": {},
+            "classes": {
+                "component-page-footer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/scrolling-list/component.js": {
+            "name": "app/pods/components/scrolling-list/component.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/select-duration/component.js": {
+            "name": "app/pods/components/select-duration/component.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/select-job-titles-multi/component.js": {
+            "name": "app/pods/components/select-job-titles-multi/component.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/select-location/component.js": {
+            "name": "app/pods/components/select-location/component.js",
+            "modules": {},
+            "classes": {
+                "component-select-duration": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/select-locations-multi/component.js": {
+            "name": "app/pods/components/select-locations-multi/component.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/select-maxstudents/component.js": {
+            "name": "app/pods/components/select-maxstudents/component.js",
+            "modules": {},
+            "classes": {
+                "component-select-maxstudents": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/select-private/component.js": {
+            "name": "app/pods/components/select-private/component.js",
+            "modules": {},
+            "classes": {
+                "component-select-private": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/components/show-message/component.js": {
+            "name": "app/pods/components/show-message/component.js",
+            "modules": {},
+            "classes": {
+                "component-show-message": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/pods/pushbots/service.js": {
+            "name": "app/pods/pushbots/service.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/routes/feedback-requests/show.js": {
+            "name": "app/routes/feedback-requests/show.js",
+            "modules": {
+                "Feedbacks": 1
+            },
+            "classes": {
+                "route feedback-requests/show": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/routes/application.js": {
+            "name": "app/routes/application.js",
+            "modules": {},
+            "classes": {
+                "route-application": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/routes/index.js": {
+            "name": "app/routes/index.js",
+            "modules": {
+                "Home": 1
+            },
+            "classes": {
+                "route-index": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/serializers/application.js": {
+            "name": "app/serializers/application.js",
+            "modules": {},
+            "classes": {
+                "serializer-application": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/app.js": {
+            "name": "app/app.js",
+            "modules": {
+                "AppCore": 1
+            },
+            "classes": {
+                "app.js": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "AppCore": {
+            "name": "AppCore",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "adapter-application": 1,
+                "authenticator-oslr": 1,
+                "authorizers-devise": 1,
+                "initializers-globals": 1,
+                "initializers-simple-auth-setup": 1,
+                "route-application": 1,
+                "route-auth": 1,
+                "serializer-application": 1,
+                "app.js": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "app/app.js",
+            "line": 1,
+            "description": "The AppCore module describes fundamental files without which the app wouldn't work at all.",
+            "itemtype": "main"
+        },
+        "Alerts": {
+            "name": "Alerts",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "model-alert": 1,
+                "model-alertable": 1,
+                "controller-app.main.alerts.index": 1,
+                "route-app.main.alerts.index": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "app/pods/app/main/alerts/index/route.js",
+            "line": 1,
+            "description": "The Alerts module handles browsing, viewing and responding to received alerts.",
+            "itemtype": "main"
+        },
+        "AvailabilityRequests": {
+            "name": "AvailabilityRequests",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "model-availability-request-vote": 1,
+                "model-availability-request": 1,
+                "controller-app.main.availability-requests.index": 1,
+                "route-app.main.availability-requests.index": 1,
+                "controller-app.main.availability-requests-new": 1,
+                "route-app.main.availability-requests-new": 1,
+                "controller-app.main.availability-requests.show": 1,
+                "route-app.main.availability-requests.show": 1,
+                "component-home-teaching-requests": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "app/pods/components/home-teaching-requests/component.js",
+            "line": 1,
+            "description": "This module handles teaching requests.\n\nFunctions:\n* A user can post a teaching request\n* Other users can up-vote that request\n* Teachers can respond to a request by creating a teaching session",
+            "itemtype": "main"
+        },
+        "AvailabilitiesSignUp": {
+            "name": "AvailabilitiesSignUp",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "model-availability-user": 1,
+                "route-app.main.availabilities.new.who": 1,
+                "controller-app.main.availabilities.show.users": 1,
+                "route-app.main.availabilities.show.users": 1,
+                "component-availability-invites": 1,
+                "component-select-maxstudents": 1,
+                "component-select-private": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "app/pods/components/select-private/component.js",
+            "line": 1,
+            "description": "AvailabilitySignUp module\n\nThis model handles linking of users to teaching sessions. It includes:\n* Signing up\n* Inviting users\n* Accepting or declining invites\n* Administrator priviledges for a given teaching session\n* Who is a teacher and who is a student",
+            "itemtype": "main"
+        },
+        "Availabilities": {
+            "name": "Availabilities",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "model-availability": 1,
+                "controller-app.main.availabilities.index": 1,
+                "route-app.main.availabilities.index": 1,
+                "route-app.main.availabilities.new.from-request": 1,
+                "controller-app.main.availabilities.new.preview": 1,
+                "route-app.main.availabilities.new.preview": 1,
+                "route-app.main.availabilities.new.what": 1,
+                "route-app.main.availabilities.new.when": 1,
+                "controller-app.main.availabilities.new": 1,
+                "route-app.main.availabilities.new": 1,
+                "controller-app.main.availabilities.show.edit": 1,
+                "route-app.main.availabilities.show.edit": 1,
+                "controller-app.main.availabilities.show.index": 1,
+                "route-app.main.availabilities.show.index": 1,
+                "component-select-duration": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "app/pods/components/select-location/component.js",
+            "line": 1,
+            "description": "The Availabilities module is the core module for creating and editing availabilities.\nIt includes setting times and descriptions.\n\nIt does not include signing up/inviting people, resources, feedback etc. which are covered in other modules.",
+            "itemtype": "main"
+        },
+        "Messages": {
+            "name": "Messages",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "model-conversation-user": 1,
+                "model-conversation": 1,
+                "model-message": 1,
+                "controller-app.main.availabilities.show.messages": 1,
+                "route-app.main.availabilities.show.messages": 1,
+                "route-app.main.conversation.edit": 1,
+                "route-app.main.conversations.index": 1,
+                "route-app.main.conversations.new": 1,
+                "route-app.main.conversation.show": 1,
+                "component-messages-list": 1,
+                "component-show-message": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "app/pods/components/show-message/component.js",
+            "line": 1,
+            "description": "Messages module\n\nHandles user to user messaging. Essentially a WhatsApp clone.\n\nThe same components are used to send messages within the show availability page - Conversations can be tagged with an availability.",
+            "itemtype": "main"
+        },
+        "Users": {
+            "name": "Users",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "model-job-title": 1,
+                "model-location": 1,
+                "model-user-location": 1,
+                "model-user": 1,
+                "controller-app.main.users.account": 1,
+                "route-app.main.users.account": 1,
+                "controller-app.main.users.edit": 1,
+                "route-app.main.users.edit": 1,
+                "controller-auth.login": 1,
+                "route-auth.login": 1,
+                "controller-auth.registration": 1,
+                "component-email-account": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/pods/components/email-account/component.js",
+            "line": 1,
+            "description": "List an email account on the account page with appropriate actions for editing"
+        },
+        "Help": {
+            "name": "Help",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "route-app.main.about": 1,
+                "route-app.main.help": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/pods/app/main/help/route.js",
+            "line": 1,
+            "description": "Help page. Displays option for about, FAQ, walkthrough"
+        },
+        "Unclassified": {
+            "name": "Unclassified",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/pods/app/main/availabilities/proposed/controller.js",
+            "line": 1,
+            "description": "LEGACY - view for proposed sessions"
+        },
+        "Feedbacks": {
+            "name": "Feedbacks",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "route app.main.availabilities.show.feedback": 1,
+                "controller-app.main.feedbacks.index": 1,
+                "route-app.main.feedbacks.index": 1,
+                "route app.main.feedbacks.show": 1,
+                "route feedback-requests/show": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/routes/feedback-requests/show.js",
+            "line": 1,
+            "description": "Complete a feedback request\n\nThis route is NOT a sub-route of app.main because an unauthenticated user could access this to complete a request. Layout is different if someone is logged in.\n\nIf the request is completed it will still render the submitted feedback."
+        },
+        "Home": {
+            "name": "Home",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "controller-app.main.home.learn": 1,
+                "route-app.main.home.learn": 1,
+                "controller-app.main.home.log": 1,
+                "route-app.main.home.log": 1,
+                "controller-app.main.home.more": 1,
+                "route-app.main.home.more": 1,
+                "controller-app.main.home.teach": 1,
+                "route-app.main.home.teach": 1,
+                "route-app.main.home": 1,
+                "component-page-footer": 1,
+                "route-index": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/routes/index.js",
+            "line": 1,
+            "description": "Landing page for the app. Redirect to the teach page."
+        },
+        "Directory": {
+            "name": "Directory",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "controller-app.main.users.index": 1,
+                "route-app.main.users.index": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "app/pods/app/main/users/index/route.js",
+            "line": 1,
+            "description": "Users Index controller\nAllows searching and browsing of users\nShould be able to search and filter users"
+        }
+    },
+    "classes": {
+        "adapter-application": {
+            "name": "adapter-application",
+            "shortname": "adapter-application",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/adapters/application.js",
+            "line": 1,
+            "description": "Application adapter. Uses devise authorizer, and data adapter mixin from ember-simple-auth for route authentication.\n\nCustom headers pass the application version and environment with each response.\n\nIncludes some hack methods to allow side loading from JSONAPI-resources."
+        },
+        "authenticator-oslr": {
+            "name": "authenticator-oslr",
+            "shortname": "authenticator-oslr",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/authenticators/oslr.js",
+            "line": 1,
+            "description": "Application autheticator. Basic DeviseAuthenticator with minimal adjust"
+        },
+        "authorizers-devise": {
+            "name": "authorizers-devise",
+            "shortname": "authorizers-devise",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/authorizers/devise.js",
+            "line": 1,
+            "description": "Application authorizer. Minor configuration to send correct user_email field name."
+        },
+        "initializers-globals": {
+            "name": "initializers-globals",
+            "shortname": "initializers-globals",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/initializers/globals.js",
+            "line": 1,
+            "description": "Injects variables that should be accessible throughout the app into routes, controllers, components and models\n\nVariables injected (from the environment.js file):\napiUrl\ncableUrl\nappEnvironment\nappVersion\nenabledModules\n\nAlso Injects jobtitles, locations, specialties variables. These should be loaded once on hitting the app.main route (i.e. when logged in).\n\nInjects unread-alerts, to hold alert counts across the app."
+        },
+        "initializers-simple-auth-setup": {
+            "name": "initializers-simple-auth-setup",
+            "shortname": "initializers-simple-auth-setup",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/initializers/simple-auth-setup.js",
+            "line": 1,
+            "description": "Injects the current user into the session object\n\nBased on this: http://miguelcamba.com/blog/2015/06/18/how-to-inject-the-current-user-using-ember-simple-auth/"
+        },
+        "model-alert": {
+            "name": "model-alert",
+            "shortname": "model-alert",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Alerts",
+            "namespace": "",
+            "file": "app/models/email-account.js",
+            "line": 1,
+            "description": "Email Account model. A user can have any number of email accounts, which may be confirmed and/or verified.\n\nConfirmed accounts have had their authentication code entered proving that the person owns the email address.\n\nVerified accounts match certain patterns e.g. nhs.net or .ac.uk",
+            "mainName": "Alerts",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "model-alertable": {
+            "name": "model-alertable",
+            "shortname": "model-alertable",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Alerts",
+            "namespace": "",
+            "file": "app/models/alertable.js",
+            "line": 1,
+            "description": "Models inherited from the alertable class can be polymorphically linked to by alert models"
+        },
+        "model-availability-request-vote": {
+            "name": "model-availability-request-vote",
+            "shortname": "model-availability-request-vote",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/models/availability-request-vote.js",
+            "line": 1,
+            "description": "When someone requests teaching, others can up-vote that teaching. This model stores the votes."
+        },
+        "model-availability-request": {
+            "name": "model-availability-request",
+            "shortname": "model-availability-request",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/models/availability-request.js",
+            "line": 1,
+            "description": "This module handles teaching requests.\n\nFunctions:\n* A user can post a teaching request\n* Other users can up-vote that request\n* Teachers can respond to a request by creating a teaching session",
+            "mainName": "AvailabilityRequests",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "model-availability-user": {
+            "name": "model-availability-user",
+            "shortname": "model-availability-user",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilitiesSignUp",
+            "namespace": "",
+            "file": "app/models/availability-user.js",
+            "line": 1,
+            "description": "AvailabilitySignUp module\n\nThis model handles linking of users to teaching sessions. It includes:\n* Signing up\n* Inviting users\n* Accepting or declining invites\n* Administrator priviledges for a given teaching session\n* Who is a teacher and who is a student",
+            "mainName": "AvailabilitiesSignUp",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "model-availability": {
+            "name": "model-availability",
+            "shortname": "model-availability",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/models/availability.js",
+            "line": 1,
+            "description": "The Availabilities module is the core module for creating and editing availabilities.\nIt includes setting times and descriptions.\n\nIt does not include signing up/inviting people, resources, feedback etc. which are covered in other modules.",
+            "mainName": "Availabilities",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "model-conversation-user": {
+            "name": "model-conversation-user",
+            "shortname": "model-conversation-user",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/models/conversation-member.js",
+            "line": 1,
+            "description": "Represents a link between a conversation and a user. All people in a conversation are represented by one of these models.\n\nIf a user is an admin for a conversation, that is stored in this model."
+        },
+        "model-conversation": {
+            "name": "model-conversation",
+            "shortname": "model-conversation",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/models/conversation.js",
+            "line": 1,
+            "description": "The Conversation model is analagous to a 'chat' in WhatsApp. It is a collection of messages, associated with conversation-user objects."
+        },
+        "model-job-title": {
+            "name": "model-job-title",
+            "shortname": "model-job-title",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/models/job-title.js",
+            "line": 1,
+            "description": "Job titles e.g. FY1, final year student. Ranked by seniority (position attribute). Qualified determines if they are a qualified doctor or not."
+        },
+        "model-location": {
+            "name": "model-location",
+            "shortname": "model-location",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/models/location.js",
+            "line": 1,
+            "description": "Defines a hospital.\n\nJoined to users through a user-location model."
+        },
+        "model-message": {
+            "name": "model-message",
+            "shortname": "model-message",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/models/message.js",
+            "line": 1,
+            "description": "Messages module\n\nHandles user to user messaging. Essentially a WhatsApp clone.\n\nThe same components are used to send messages within the show availability page - Conversations can be tagged with an availability.",
+            "mainName": "Messages",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "model-user-location": {
+            "name": "model-user-location",
+            "shortname": "model-user-location",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/models/user-location.js",
+            "line": 1,
+            "description": "Join model connecting users and hospitals."
+        },
+        "model-user": {
+            "name": "model-user",
+            "shortname": "model-user",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/models/user.js",
+            "line": 1,
+            "description": "Defines a User object.\n\nProperties synchronised with the server-side model:\nname, email, bio, password, terms, gmc\n\nRead-only properties (i.e. can't be updated from the Ember app, leading to potential insecurities):\nconfirmed, avatar_url"
+        },
+        "route-app.main.about": {
+            "name": "route-app.main.about",
+            "shortname": "route-app.main.about",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Help",
+            "namespace": "",
+            "file": "app/pods/app/main/about/route.js",
+            "line": 1,
+            "description": "Help page\nLinks to FAQs and walkthrough pages"
+        },
+        "controller-app.main.alerts.index": {
+            "name": "controller-app.main.alerts.index",
+            "shortname": "controller-app.main.alerts.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Alerts",
+            "namespace": "",
+            "file": "app/pods/app/main/alerts/index/controller.js",
+            "line": 1,
+            "description": "Alerts page\nShow recent alerts"
+        },
+        "route-app.main.alerts.index": {
+            "name": "route-app.main.alerts.index",
+            "shortname": "route-app.main.alerts.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Alerts",
+            "namespace": "",
+            "file": "app/pods/app/main/alerts/index/route.js",
+            "line": 1,
+            "description": "Alerts page\nShow recent alerts"
+        },
+        "controller-app.main.availabilities.index": {
+            "name": "controller-app.main.availabilities.index",
+            "shortname": "controller-app.main.availabilities.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/index/controller.js",
+            "line": 1,
+            "description": "Availabilities index controller. Handles listing and searching of teaching sessions."
+        },
+        "route-app.main.availabilities.index": {
+            "name": "route-app.main.availabilities.index",
+            "shortname": "route-app.main.availabilities.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/index/route.js",
+            "line": 1,
+            "description": "Availabilities index route. Handles listing and searching of teaching sessions."
+        },
+        "route-app.main.availabilities.new.from-request": {
+            "name": "route-app.main.availabilities.new.from-request",
+            "shortname": "route-app.main.availabilities.new.from-request",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/new/from-request/route.js",
+            "line": 1,
+            "description": "This utility route is for creating a teaching session from a teaching request.\n\n* The default new availability model is already loaded in the 'new' parent route\n* Here we load the request, modify the model and redirect to the 'when' sibling route"
+        },
+        "controller-app.main.availabilities.new.preview": {
+            "name": "controller-app.main.availabilities.new.preview",
+            "shortname": "controller-app.main.availabilities.new.preview",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/new/quick/controller.js",
+            "line": 1,
+            "description": "New Availability Quick Controller\n\nCreate a quick teaching session using default options for 'teach now'"
+        },
+        "route-app.main.availabilities.new.preview": {
+            "name": "route-app.main.availabilities.new.preview",
+            "shortname": "route-app.main.availabilities.new.preview",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/new/quick/route.js",
+            "line": 1,
+            "description": "New Availability Quick Route\n\nCreate a quick teaching session using default options for 'teach now'"
+        },
+        "route-app.main.availabilities.new.what": {
+            "name": "route-app.main.availabilities.new.what",
+            "shortname": "route-app.main.availabilities.new.what",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/new/what/route.js",
+            "line": 1,
+            "description": "New Availability What Route\n\nDetails of what your new teaching session is about"
+        },
+        "route-app.main.availabilities.new.when": {
+            "name": "route-app.main.availabilities.new.when",
+            "shortname": "route-app.main.availabilities.new.when",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/new/when/route.js",
+            "line": 1,
+            "description": "New Availability When Route\n\nDetails of when your new teaching session is"
+        },
+        "route-app.main.availabilities.new.who": {
+            "name": "route-app.main.availabilities.new.who",
+            "shortname": "route-app.main.availabilities.new.who",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilitiesSignUp",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/new/who/route.js",
+            "line": 1,
+            "description": "New Availability Who Route\n\nInvite people to your availability and see who has signed up"
+        },
+        "controller-app.main.availabilities.new": {
+            "name": "controller-app.main.availabilities.new",
+            "shortname": "controller-app.main.availabilities.new",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/new/controller.js",
+            "line": 1,
+            "description": "New Availability Controller.\n\nAll actions are defined in the sub-routes."
+        },
+        "route-app.main.availabilities.new": {
+            "name": "route-app.main.availabilities.new",
+            "shortname": "route-app.main.availabilities.new",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/new/route.js",
+            "line": 1,
+            "description": "New Availability Route.\n\nHas separate sub-routes for when, who, what and preview. Also has a 'quick' subroute which has basic info then skips straight to preview."
+        },
+        "controller-app.main.availabilities.show.edit": {
+            "name": "controller-app.main.availabilities.show.edit",
+            "shortname": "controller-app.main.availabilities.show.edit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/edit/controller.js",
+            "line": 1,
+            "description": "Edit Availability Route.\n\nRendered as a sub-route of the show route\n\nEdit basic details e.g. location, time, information about the teaching"
+        },
+        "route-app.main.availabilities.show.edit": {
+            "name": "route-app.main.availabilities.show.edit",
+            "shortname": "route-app.main.availabilities.show.edit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/edit/route.js",
+            "line": 1,
+            "description": "Edit Availability Route.\n\nRendered as a sub-route of the show route\n\nEdit basic details e.g. location, time, information about the teaching"
+        },
+        "route app.main.availabilities.show.feedback": {
+            "name": "route app.main.availabilities.show.feedback",
+            "shortname": "route app.main.availabilities.show.feedback",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Feedbacks",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/feedback/route.js",
+            "line": 1,
+            "description": "View and request feedback about a particular session"
+        },
+        "controller-app.main.availabilities.show.index": {
+            "name": "controller-app.main.availabilities.show.index",
+            "shortname": "controller-app.main.availabilities.show.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/controller.js",
+            "line": 1,
+            "description": "Show Availability Route\n\nThis is the parent route for show availability. The actual 'show' page is rendered as a subroute (index). Editing and other functions are rendered as separate sub-routes but inherit the same model from this route."
+        },
+        "controller-app.main.availabilities.show.messages": {
+            "name": "controller-app.main.availabilities.show.messages",
+            "shortname": "controller-app.main.availabilities.show.messages",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/messages/controller.js",
+            "line": 1,
+            "description": "Show messages associated with a teaching session.\n\nVery similar to the messages page but rendered within the availabilities/show page."
+        },
+        "route-app.main.availabilities.show.messages": {
+            "name": "route-app.main.availabilities.show.messages",
+            "shortname": "route-app.main.availabilities.show.messages",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/messages/route.js",
+            "line": 1,
+            "description": "Show messages associated with a teaching session.\n\nVery similar to the messages page but rendered within the availabilities/show page."
+        },
+        "controller-app.main.availabilities.show.users": {
+            "name": "controller-app.main.availabilities.show.users",
+            "shortname": "controller-app.main.availabilities.show.users",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilitiesSignUp",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/users/controller.js",
+            "line": 1,
+            "description": "Show Availability Users Route\n\nInvite people to your availability and see who has signed up"
+        },
+        "route-app.main.availabilities.show.users": {
+            "name": "route-app.main.availabilities.show.users",
+            "shortname": "route-app.main.availabilities.show.users",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilitiesSignUp",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/users/route.js",
+            "line": 1,
+            "description": "Show Availability Users Route\n\nInvite people to your availability and see who has signed up"
+        },
+        "route-app.main.availabilities.show.index": {
+            "name": "route-app.main.availabilities.show.index",
+            "shortname": "route-app.main.availabilities.show.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/app/main/availabilities/show/route.js",
+            "line": 1,
+            "description": "Show Availability Route\n\nThis is the parent route for show availability. The actual 'show' page is rendered as a subroute (index). Editing and other functions are rendered as separate sub-routes but inherit the same model from this route."
+        },
+        "controller-app.main.availability-requests.index": {
+            "name": "controller-app.main.availability-requests.index",
+            "shortname": "controller-app.main.availability-requests.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/pods/app/main/availability-requests/index/controller.js",
+            "line": 1,
+            "description": "Browse teaching requests"
+        },
+        "route-app.main.availability-requests.index": {
+            "name": "route-app.main.availability-requests.index",
+            "shortname": "route-app.main.availability-requests.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/pods/app/main/availability-requests/index/route.js",
+            "line": 1,
+            "description": "Browse teaching requests"
+        },
+        "controller-app.main.availability-requests-new": {
+            "name": "controller-app.main.availability-requests-new",
+            "shortname": "controller-app.main.availability-requests-new",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/pods/app/main/availability-requests/new/controller.js",
+            "line": 1,
+            "description": "Create a new teaching request"
+        },
+        "route-app.main.availability-requests-new": {
+            "name": "route-app.main.availability-requests-new",
+            "shortname": "route-app.main.availability-requests-new",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/pods/app/main/availability-requests/new/route.js",
+            "line": 1,
+            "description": "Create a new teaching request"
+        },
+        "controller-app.main.availability-requests.show": {
+            "name": "controller-app.main.availability-requests.show",
+            "shortname": "controller-app.main.availability-requests.show",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/pods/app/main/availability-requests/show/controller.js",
+            "line": 1,
+            "description": "Show a teaching request"
+        },
+        "route-app.main.availability-requests.show": {
+            "name": "route-app.main.availability-requests.show",
+            "shortname": "route-app.main.availability-requests.show",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/pods/app/main/availability-requests/show/route.js",
+            "line": 1,
+            "description": "Show a teaching request"
+        },
+        "route-app.main.conversation.edit": {
+            "name": "route-app.main.conversation.edit",
+            "shortname": "route-app.main.conversation.edit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/pods/app/main/conversations/edit/route.js",
+            "line": 1,
+            "description": "Edit conversation information.\n\nAccessible only to admins of the conversation.\nAllows the name to be changed, people to be added and removed."
+        },
+        "route-app.main.conversations.index": {
+            "name": "route-app.main.conversations.index",
+            "shortname": "route-app.main.conversations.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/pods/app/main/conversations/index/route.js",
+            "line": 1,
+            "description": "Lists conversations which a user is a member of.\nThis does include those associated with availabilities."
+        },
+        "route-app.main.conversations.new": {
+            "name": "route-app.main.conversations.new",
+            "shortname": "route-app.main.conversations.new",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/pods/app/main/conversations/new/route.js",
+            "line": 1,
+            "description": "Create a new conversation. Should be able to set the name and invite people to it in the creation process."
+        },
+        "route-app.main.conversation.show": {
+            "name": "route-app.main.conversation.show",
+            "shortname": "route-app.main.conversation.show",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/pods/app/main/conversations/show/route.js",
+            "line": 1,
+            "description": "Conversations Show page\nShows a particular conversation and all messages in it\nWill load latest messages and should inject more messages when received\nScrolling up should load older messages"
+        },
+        "controller-app.main.feedbacks.index": {
+            "name": "controller-app.main.feedbacks.index",
+            "shortname": "controller-app.main.feedbacks.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Feedbacks",
+            "namespace": "",
+            "file": "app/pods/app/main/feedbacks/index/controller.js",
+            "line": 1,
+            "description": "Browse and search received feedback"
+        },
+        "route-app.main.feedbacks.index": {
+            "name": "route-app.main.feedbacks.index",
+            "shortname": "route-app.main.feedbacks.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Feedbacks",
+            "namespace": "",
+            "file": "app/pods/app/main/feedbacks/index/route.js",
+            "line": 1,
+            "description": "Browse and search received feedback"
+        },
+        "route app.main.feedbacks.show": {
+            "name": "route app.main.feedbacks.show",
+            "shortname": "route app.main.feedbacks.show",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Feedbacks",
+            "namespace": "",
+            "file": "app/pods/app/main/feedbacks/show/route.js",
+            "line": 1,
+            "description": "View submitted feedback"
+        },
+        "route-app.main.help": {
+            "name": "route-app.main.help",
+            "shortname": "route-app.main.help",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Help",
+            "namespace": "",
+            "file": "app/pods/app/main/help/route.js",
+            "line": 1,
+            "description": "Help page. Displays option for about, FAQ, walkthrough"
+        },
+        "controller-app.main.home.learn": {
+            "name": "controller-app.main.home.learn",
+            "shortname": "controller-app.main.home.learn",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/learn/controller.js",
+            "line": 1,
+            "description": "Home page"
+        },
+        "route-app.main.home.learn": {
+            "name": "route-app.main.home.learn",
+            "shortname": "route-app.main.home.learn",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/learn/route.js",
+            "line": 1,
+            "description": "Home page"
+        },
+        "controller-app.main.home.log": {
+            "name": "controller-app.main.home.log",
+            "shortname": "controller-app.main.home.log",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/log/controller.js",
+            "line": 1,
+            "description": "Home page"
+        },
+        "route-app.main.home.log": {
+            "name": "route-app.main.home.log",
+            "shortname": "route-app.main.home.log",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/log/route.js",
+            "line": 1,
+            "description": "Home page"
+        },
+        "controller-app.main.home.more": {
+            "name": "controller-app.main.home.more",
+            "shortname": "controller-app.main.home.more",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/more/controller.js",
+            "line": 1,
+            "description": "Home page"
+        },
+        "route-app.main.home.more": {
+            "name": "route-app.main.home.more",
+            "shortname": "route-app.main.home.more",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/more/route.js",
+            "line": 1,
+            "description": "Home page"
+        },
+        "controller-app.main.home.teach": {
+            "name": "controller-app.main.home.teach",
+            "shortname": "controller-app.main.home.teach",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/teach/controller.js",
+            "line": 1,
+            "description": "Home page"
+        },
+        "route-app.main.home.teach": {
+            "name": "route-app.main.home.teach",
+            "shortname": "route-app.main.home.teach",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/teach/route.js",
+            "line": 1,
+            "description": "Home \"Teach\" page\n\nShows options for creating sessions and shows most recent teaching requests"
+        },
+        "route-app.main.home": {
+            "name": "route-app.main.home",
+            "shortname": "route-app.main.home",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/app/main/home/route.js",
+            "line": 1,
+            "description": "Wrapper route for the four 'home' pages (teach, learn, log, more)"
+        },
+        "controller-app.main.users.account": {
+            "name": "controller-app.main.users.account",
+            "shortname": "controller-app.main.users.account",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/pods/app/main/users/account/controller.js",
+            "line": 1,
+            "description": "Users Account controller\n\nEdit your Account\nUsed for email accounts and password changes - not appropriate for profile page"
+        },
+        "route-app.main.users.account": {
+            "name": "route-app.main.users.account",
+            "shortname": "route-app.main.users.account",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/pods/app/main/users/account/route.js",
+            "line": 1,
+            "description": "Users Account route\n\nEdit your Account\nUsed for email accounts and password changes - not appropriate for profile page"
+        },
+        "controller-app.main.users.edit": {
+            "name": "controller-app.main.users.edit",
+            "shortname": "controller-app.main.users.edit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/pods/app/main/users/edit/controller.js",
+            "line": 1,
+            "description": "Users Edit controller\n\nEdit your profile\nUses Ember Changesets to make sure changes are only saved when 'Save' is clicked"
+        },
+        "route-app.main.users.edit": {
+            "name": "route-app.main.users.edit",
+            "shortname": "route-app.main.users.edit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/pods/app/main/users/edit/route.js",
+            "line": 1,
+            "description": "Users Edit route\n\nEdit your profile\nUses Ember Changesets to make sure changes are only saved when 'Save' is clicked\nwillTransition route used to give a \"Are you sure you want to leave this page?\" warning when leaving."
+        },
+        "controller-app.main.users.index": {
+            "name": "controller-app.main.users.index",
+            "shortname": "controller-app.main.users.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Directory",
+            "namespace": "",
+            "file": "app/pods/app/main/users/index/controller.js",
+            "line": 1,
+            "description": "Users Index controller\nAllows searching and browsing of users\nShould be able to search and filter users"
+        },
+        "route-app.main.users.index": {
+            "name": "route-app.main.users.index",
+            "shortname": "route-app.main.users.index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Directory",
+            "namespace": "",
+            "file": "app/pods/app/main/users/index/route.js",
+            "line": 1,
+            "description": "Users Index route\nAllows searching and browsing of users\nShould be able to search and filter users"
+        },
+        "route-application": {
+            "name": "route-application",
+            "shortname": "route-application",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/routes/application.js",
+            "line": 1,
+            "description": "Application Route\n\nDefines methods for user authentication\nLooks up job titles and specialties on page load"
+        },
+        "controller-auth.login": {
+            "name": "controller-auth.login",
+            "shortname": "controller-auth.login",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/pods/auth/login/controller.js",
+            "line": 1,
+            "description": "Login route. Handles authentication and forgotten passwords."
+        },
+        "route-auth.login": {
+            "name": "route-auth.login",
+            "shortname": "route-auth.login",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/pods/auth/login/route.js",
+            "line": 1,
+            "description": "Login route - the first page a user sees. Uses ember-simple-auth."
+        },
+        "controller-auth.registration": {
+            "name": "controller-auth.registration",
+            "shortname": "controller-auth.registration",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/pods/auth/registration/controller.js",
+            "line": 1,
+            "description": "Registration route. Handles registration of a new user."
+        },
+        "route-auth": {
+            "name": "route-auth",
+            "shortname": "route-auth",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/pods/auth/route.js",
+            "line": 1,
+            "description": "Anyone accessing the site without logging in gets directed to the auth route.\n\nSubroutes are login and registration."
+        },
+        "component-availability-invites": {
+            "name": "component-availability-invites",
+            "shortname": "component-availability-invites",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilitiesSignUp",
+            "namespace": "",
+            "file": "app/pods/components/availability-invites/component.js",
+            "line": 1,
+            "description": "This is a complex component which handles inviting users to a teaching session.\n\nIt shows a list of invited/attending users and allows inviting of new ones if admin=true."
+        },
+        "component-page-footer": {
+            "name": "component-page-footer",
+            "shortname": "component-page-footer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/pods/components/page-footer/component.js",
+            "line": 1,
+            "description": "Simple wrapper that puts content in a footer block, appropriately positioned"
+        },
+        "component-email-account": {
+            "name": "component-email-account",
+            "shortname": "component-email-account",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Users",
+            "namespace": "",
+            "file": "app/pods/components/email-account/component.js",
+            "line": 1,
+            "description": "List an email account on the account page with appropriate actions for editing"
+        },
+        "component-home-teaching-requests": {
+            "name": "component-home-teaching-requests",
+            "shortname": "component-home-teaching-requests",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilityRequests",
+            "namespace": "",
+            "file": "app/pods/components/home-teaching-requests/component.js",
+            "line": 1,
+            "description": "This shows a list of teaching requests on the home page for the current user."
+        },
+        "component-messages-list": {
+            "name": "component-messages-list",
+            "shortname": "component-messages-list",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/pods/components/messages-list/component.js",
+            "line": 1,
+            "description": "Displays a list of messages\nAutomatically scrolls down when a new one appears"
+        },
+        "component-select-duration": {
+            "name": "component-select-duration",
+            "shortname": "component-select-duration",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Availabilities",
+            "namespace": "",
+            "file": "app/pods/components/select-location/component.js",
+            "line": 1,
+            "description": "Change the session location. Uses ember-power-select."
+        },
+        "component-select-maxstudents": {
+            "name": "component-select-maxstudents",
+            "shortname": "component-select-maxstudents",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilitiesSignUp",
+            "namespace": "",
+            "file": "app/pods/components/select-maxstudents/component.js",
+            "line": 1,
+            "description": "Adjust the maximum students using plus-minus component."
+        },
+        "component-select-private": {
+            "name": "component-select-private",
+            "shortname": "component-select-private",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AvailabilitiesSignUp",
+            "namespace": "",
+            "file": "app/pods/components/select-private/component.js",
+            "line": 1,
+            "description": "Toggle whether a session is private or public"
+        },
+        "component-show-message": {
+            "name": "component-show-message",
+            "shortname": "component-show-message",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Messages",
+            "namespace": "",
+            "file": "app/pods/components/show-message/component.js",
+            "line": 1,
+            "description": "Displays a message.\nFigures out if it's by the current user and displays appropriately\n\nTODO: Add in content reports"
+        },
+        "route feedback-requests/show": {
+            "name": "route feedback-requests/show",
+            "shortname": "route feedback-requests/show",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Feedbacks",
+            "namespace": "",
+            "file": "app/routes/feedback-requests/show.js",
+            "line": 1,
+            "description": "Complete a feedback request\n\nThis route is NOT a sub-route of app.main because an unauthenticated user could access this to complete a request. Layout is different if someone is logged in.\n\nIf the request is completed it will still render the submitted feedback."
+        },
+        "route-index": {
+            "name": "route-index",
+            "shortname": "route-index",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Home",
+            "namespace": "",
+            "file": "app/routes/index.js",
+            "line": 1,
+            "description": "Landing page for the app. Redirect to the teach page."
+        },
+        "serializer-application": {
+            "name": "serializer-application",
+            "shortname": "serializer-application",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/serializers/application.js",
+            "line": 1,
+            "description": "Default serializer. Allows readOnly attributes."
+        },
+        "app.js": {
+            "name": "app.js",
+            "shortname": "app.js",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "AppCore",
+            "namespace": "",
+            "file": "app/app.js",
+            "line": 1,
+            "description": "The AppCore module describes fundamental files without which the app wouldn't work at all."
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "app/models/user.js",
+            "line": 48,
+            "description": "Determine if the profile is complete\ni.e. has a job title and a location set",
+            "itemtype": "method",
+            "name": "incompleteProfile",
+            "class": "model-user",
+            "module": "Users"
+        },
+        {
+            "file": "app/models/user.js",
+            "line": 64,
+            "description": "Determine if the person is a qualified doctor based on their job title",
+            "itemtype": "method",
+            "name": "isQualified",
+            "class": "model-user",
+            "module": "Users"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/completed/controller.js",
+            "line": 30,
+            "description": "Click the tick button, marking that a user attended teaching. Add to the attendedUsers array",
+            "itemtype": "method",
+            "name": "markAttended",
+            "class": "controller-app.main.availabilities.index",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/completed/controller.js",
+            "line": 49,
+            "description": "Click the cross button, marking that a user did not attend teaching. Add to the dnaUsers array",
+            "itemtype": "method",
+            "name": "markDna",
+            "class": "controller-app.main.availabilities.index",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/completed/controller.js",
+            "line": 68,
+            "description": "Click the cross button, marking that a user did not attend teaching. Add to the dnaUsers array",
+            "itemtype": "method",
+            "name": "toggleFeedback",
+            "class": "controller-app.main.availabilities.index",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/completed/controller.js",
+            "line": 86,
+            "description": "Mark the session as complete. Record the attendance of all users. Create feedback requests if appropriate.",
+            "itemtype": "method",
+            "name": "markComplete",
+            "class": "controller-app.main.availabilities.index",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/index/controller.js",
+            "line": 31,
+            "description": "Load more availabilities, using offset and limit parameters.",
+            "itemtype": "method",
+            "name": "loadAvailabilities",
+            "class": "controller-app.main.availabilities.index",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/index/controller.js",
+            "line": 58,
+            "description": "When filters change, reset offset and model and load again",
+            "itemtype": "method",
+            "name": "filterAvailabilities",
+            "class": "controller-app.main.availabilities.index",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/new/preview/controller.js",
+            "line": 16,
+            "description": "Save the session created in the 'new' parent route.",
+            "itemtype": "method",
+            "name": "postSession",
+            "class": "controller-app.main.availabilities.new.preview",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/new/quick/controller.js",
+            "line": 18,
+            "description": "Save the session created in the 'new' parent route.",
+            "itemtype": "method",
+            "name": "postSession",
+            "class": "controller-app.main.availabilities.new.preview",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/new/route.js",
+            "line": 26,
+            "description": "Set up the model as a new availability.\nThis is shared between all 'new' sub-routes.\nDefault settings are applied.\nBy default the creating user should be attached as a teacher.",
+            "itemtype": "method",
+            "name": "model",
+            "class": "route-app.main.availabilities.new",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/new/route.js",
+            "line": 58,
+            "description": "In the setupController method we create a default location and an availability-user object to link the session to the current user.",
+            "itemtype": "method",
+            "name": "setupController",
+            "class": "route-app.main.availabilities.new",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/new/route.js",
+            "line": 97,
+            "description": "Prevent moving out of the route if any defaults have changed.",
+            "itemtype": "method",
+            "name": "willTransition",
+            "class": "route-app.main.availabilities.new",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/app/main/availabilities/show/messages/controller.js",
+            "line": 23,
+            "description": "Create a new message object.",
+            "itemtype": "method",
+            "name": "sendMessage",
+            "class": "controller-app.main.availabilities.show.messages",
+            "module": "Messages"
+        },
+        {
+            "file": "app/pods/app/main/availability-requests/show/route.js",
+            "line": 32,
+            "description": "Functions in setupController:\n* Set the page title\n* Check if a user can upvote this (they can unless they have already voted) and set the canVote variable",
+            "itemtype": "method",
+            "name": "setupController",
+            "class": "route-app.main.availability-requests.show",
+            "module": "AvailabilityRequests"
+        },
+        {
+            "file": "app/pods/app/main/conversations/show/route.js",
+            "line": 53,
+            "description": "Load the conversation object.",
+            "itemtype": "method",
+            "name": "model",
+            "class": "route-app.main.conversation.show",
+            "module": "Messages"
+        },
+        {
+            "file": "app/pods/app/main/feedbacks/index/controller.js",
+            "line": 15,
+            "description": "Allow searching of feedback by:\n* Name of person submitting\n* Feedback fields",
+            "itemtype": "method",
+            "name": "doSearch",
+            "class": "controller-app.main.feedbacks.index",
+            "module": "Feedbacks"
+        },
+        {
+            "file": "app/pods/app/main/users/account/controller.js",
+            "line": 19,
+            "description": "Toggle the add email form",
+            "itemtype": "method",
+            "name": "showAddEmail",
+            "class": "controller-app.main.users.account",
+            "module": "Users"
+        },
+        {
+            "file": "app/pods/app/main/users/account/controller.js",
+            "line": 28,
+            "description": "Create a new email account with the given email address",
+            "itemtype": "method",
+            "name": "addEmail",
+            "class": "controller-app.main.users.account",
+            "module": "Users"
+        },
+        {
+            "file": "app/pods/app/main/users/account/controller.js",
+            "line": 60,
+            "description": "Toggle the Change Password field",
+            "itemtype": "method",
+            "name": "showChangePassword",
+            "class": "controller-app.main.users.account",
+            "module": "Users"
+        },
+        {
+            "file": "app/pods/app/main/users/account/controller.js",
+            "line": 70,
+            "description": "Change the password\nValidates the old password",
+            "itemtype": "method",
+            "name": "addEmail",
+            "class": "controller-app.main.users.account",
+            "module": "Users"
+        },
+        {
+            "file": "app/pods/app/main/users/edit/controller.js",
+            "line": 26,
+            "description": "Calls 'save' on an edited changeset of a User object.\nRedirects to incomplete profile if the profile is incomplete after editing",
+            "itemtype": "method",
+            "name": "doneEditing",
+            "class": "controller-app.main.users.edit",
+            "module": "Users"
+        },
+        {
+            "file": "app/pods/app/main/users/edit/controller.js",
+            "line": 51,
+            "description": "Cancel changes - reset the changeset",
+            "itemtype": "method",
+            "name": "undoChanges",
+            "class": "controller-app.main.users.edit",
+            "module": "Users"
+        },
+        {
+            "file": "app/pods/app/main/users/edit/controller.js",
+            "line": 63,
+            "description": "Toggle the editing user name field",
+            "itemtype": "method",
+            "name": "toggleEditingUserName",
+            "class": "controller-app.main.users.edit",
+            "module": "Users"
+        },
+        {
+            "file": "app/pods/components/messages-list/component.js",
+            "line": 21,
+            "description": "didInsertElement method - makes the didRenderElement function run at appropriate times",
+            "itemtype": "method",
+            "name": "didInsertElement",
+            "class": "component-messages-list",
+            "module": "Messages"
+        },
+        {
+            "file": "app/pods/components/messages-list/component.js",
+            "line": 55,
+            "description": "Sets up the scrollDown function to run regularly.\nThis checks if the element height has changed and scrolls down if it has.",
+            "itemtype": "method",
+            "name": "didRenderElement",
+            "class": "component-messages-list",
+            "module": "Messages"
+        },
+        {
+            "file": "app/pods/components/scrolling-list/component.js",
+            "line": 18,
+            "description": "Load more objects into model and increase the offset variable.\n\nIt is confusing because it uses this, to mean the current component, then uses this again within the el.scroll function to refer to the element being scrolled.",
+            "itemtype": "method",
+            "name": "loadObjects",
+            "class": "component-select-duration",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/pods/components/scrolling-list/component.js",
+            "line": 44,
+            "description": "This method calls the loadObjects method when the user scrolls to the bottom of the div.\n\nIt is confusing because it uses this, to mean the current component, then uses this again within the el.scroll function to refer to the element being scrolled.",
+            "itemtype": "method",
+            "name": "setupScroll",
+            "class": "component-select-duration",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/pods/components/select-job-titles-multi/component.js",
+            "line": 5,
+            "description": "Respond to selection of locations\nUses ember-power-select",
+            "itemtype": "method",
+            "name": "setUserLocations",
+            "class": "component-select-duration",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/pods/components/select-locations-multi/component.js",
+            "line": 6,
+            "description": "Respond to selection of locations\nUses ember-power-select",
+            "itemtype": "method",
+            "name": "setUserLocations",
+            "class": "component-select-maxstudents",
+            "module": "Availabilities"
+        },
+        {
+            "file": "app/routes/application.js",
+            "line": 19,
+            "description": "Look up job titles and locations on page load",
+            "itemtype": "method",
+            "name": "beforeModel",
+            "class": "route-application",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/routes/application.js",
+            "line": 52,
+            "description": "PopulateCurrentUser\nThis method looks up the current user from the session ID\nIt is called on authentication, and in the beforeModel hook\nThe currentUser service is then populated and injected in all routes, controllers and components\nFor backwards compatibility it defines some extra variables on the session object",
+            "itemtype": "method",
+            "name": "_populateCurrentUser",
+            "class": "route-application",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/routes/application.js",
+            "line": 81,
+            "description": "Function called on login:\n Find the current user and store this info\n Register the device with the user's account\n If they're not confirmed, set up a poll to check when they do confirm\n If they are confirmed redirect to a walkthrough if they haven't seen it before",
+            "itemtype": "method",
+            "name": "sessionAuthenticated",
+            "class": "route-application",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/routes/application.js",
+            "line": 111,
+            "description": "Use didTransition to mark when alerts have been read.\n\nOn transitioning to a new page, update any loaded alerts pointing to that page with unread=false.",
+            "itemtype": "method",
+            "name": "didTransition",
+            "class": "route-application",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/routes/application.js",
+            "line": 144,
+            "description": "ember-simple-auth method. Defines where to redirect on logout.",
+            "itemtype": "method",
+            "name": "logout",
+            "class": "route-application",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/routes/application.js",
+            "line": 157,
+            "description": "Open links in a new window, or in the default browser on a phone.",
+            "itemtype": "method",
+            "name": "openLink",
+            "class": "route-application",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/routes/application.js",
+            "line": 166,
+            "description": "On route loading, show a loading spinner",
+            "itemtype": "method",
+            "name": "loading",
+            "class": "route-application",
+            "module": "AppCore"
+        },
+        {
+            "file": "app/routes/application.js",
+            "line": 182,
+            "description": "Utility method for transitioning to URLs. Required as alert objects store raw URLs rather than routes.",
+            "itemtype": "method",
+            "name": "transitionToUrl",
+            "class": "route-application",
+            "module": "AppCore"
+        }
+    ],
+    "warnings": []
+}

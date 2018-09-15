@@ -1,0 +1,28 @@
+
+Name:
+{{input type='text' value=user.name}}
+
+<br/>
+Email:
+{{input type='text' value=user.email}}
+
+<br/>
+
+Bio:
+{{textarea value=user.bio}}
+
+<br/>
+
+Job Title:
+
+<br/>
+{{select-2 content=jobtitles.all value=user.jobTitle optionLabelPath="name"}}
+
+<br/>
+
+
+Password:
+<br/>
+{{input type="text" placeholder="Change Password"}}
+
+<button {{action 'saveUser'}}>Save</button>

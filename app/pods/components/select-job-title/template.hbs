@@ -1,0 +1,6 @@
+{{#power-select
+  options=jobtitles.all
+  selected=value
+  onchange=(action "selectJobTitle") as |jt|}}
+  {{jt.name}}
+{{/power-select}}

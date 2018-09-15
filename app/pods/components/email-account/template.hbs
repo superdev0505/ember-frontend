@@ -1,0 +1,80 @@
+<div class="row email-account-list {{if emailAccount.unconfirmed 'bg-warning'}}">
+
+    <div class="col-xs-12 col-md-6 email-account-list-body">
+
+      <div class="email-account-list-icons">
+
+        {{#if emailAccount.unconfirmed}}
+          {{fa-icon 'fa-exclamation-triangle'}}
+        {{/if}}
+
+        {{#if emailAccount.verified}}
+          {{fa-icon 'check-square-o'}}
+        {{/if}}
+
+        {{#if emailAccount.primary}}
+          {{fa-icon "star"}}
+        {{else}}
+          {{fa-icon "star-o"}}
+        {{/if}}
+
+      </div>
+
+
+      <button {{action "toggleEmailOptions" emailAccount}} class="email-account-options-button text-left">
+        <div class="email-account-list-name">
+          {{emailAccount.email}}
+          {{fa-icon 'caret-down'}}
+        </div>
+        {{#if emailAccount.primary}}
+          <div class="small-subtext">
+            Primary email - use this to log in
+          </div>
+        {{/if}}
+        {{#if emailAccount.unconfirmed}}
+          <div class="small-subtext">
+            Unconfirmed email
+          </div>
+        {{/if}}
+
+      </button>
+
+      <div class="email-account-options hidden email-account-options-{{emailAccount.id}}">
+
+
+        {{#if emailAccount.unconfirmed}}
+
+          {{input value=enteredCode class='email-confirmation-code-field form-control' placeholder="Enter Confirmation Code"}}
+          <button {{action 'submitConfirmationCode'}} class='btn btn-default'>Submit Code</button>
+
+          <br/>
+          <button {{action 'resendConfirmation' emailAccount}} class="btn btn-default resendConfirmation">
+            {{fa-icon 'fa-exclamation-triangle'}}
+            Click to resend confirmation email.
+          </button>
+        {{/if}}
+
+
+        {{#if emailAccount.primary}}
+          {{fa-icon "star"}}
+          Primary email - use this to log in
+
+        {{else}}
+          {{#if emailAccount.confirmed}}
+            <button {{action 'makePrimary' emailAccount}} class="btn btn-default">
+              {{fa-icon "star-o"}} Make this your primary email
+            </button>
+          {{/if}}
+
+          <button {{action 'deleteEmailAccount' emailAccount}} class="btn btn-default deleteEmailAccount">
+            {{fa-icon "fa-trash-o"}}
+            Delete account
+          </button>
+        {{/if}}
+
+
+      </div>
+
+    </div>
+
+  </div>

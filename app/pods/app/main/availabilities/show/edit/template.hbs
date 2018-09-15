@@ -1,0 +1,14 @@
+<div class='show-availability-info'>
+  {{availability-info availability=changeset canEdit=canEdit editInfo=editInfo}}
+</div>
+
+<div class='show-availability-times'>
+  {{availability-times availability=changeset canEdit=canEdit}}
+</div>
+
+<button {{action 'saveChanges'}} class='btn btn-default'>
+  Save Changes
+</button>
+<button {{action 'cancelChanges'}} class='btn btn-default'>
+  Cancel
+</button>
